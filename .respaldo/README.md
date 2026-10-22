@@ -1,6 +1,6 @@
 # Yokohama versión integrada en EXCOBA
 
-Copia privada de las fuentes del proyecto al 2026-10-22.
+Copia de las fuentes del proyecto al 2026-10-22.
 
 Origen: EXCOBA-PLATAFORMA-/yokohama.
 
