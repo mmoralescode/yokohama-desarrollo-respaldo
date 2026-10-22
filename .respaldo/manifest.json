@@ -1,0 +1,1265 @@
+{
+  "date": "2026-10-22",
+  "project": "Yokohama versión de Documentos",
+  "source": "Documentos/yokohama-desarrollo-",
+  "repository": "mmoralescode/yokohama-desarrollo-respaldo",
+  "branch": "main",
+  "source_git": {
+    "branch": "main",
+    "head": "1b158e2e377768b221b2688dc53a0e58ca2fc286",
+    "pending_change_entries": 132
+  },
+  "source_file_count": 207,
+  "source_bytes": 16241196,
+  "excluded_candidate_counts": {},
+  "config_changes": [
+    {
+      "path": ".gitignore",
+      "original_archived_at": ".respaldo/original-gitignore.txt"
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 411,
+      "source_sha256": "249eb4b355c55a5cf7bd4da72e4541b4d989b5c2b9bc44f856549aedd5df43e7",
+      "snapshot_sha256": "5000228ad5b8831148fd796835dc471c4c9a8ad3da1ba54e417f035e78cb7fef"
+    },
+    {
+      "path": "README.md",
+      "bytes": 32207,
+      "source_sha256": "58627eb2fec7b28870a2052d8b768cab252665b0c079e2809f56bdafed41ff1c",
+      "snapshot_sha256": "58627eb2fec7b28870a2052d8b768cab252665b0c079e2809f56bdafed41ff1c"
+    },
+    {
+      "path": "api-deployment/.python-version",
+      "bytes": 5,
+      "source_sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398",
+      "snapshot_sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398"
+    },
+    {
+      "path": "api-deployment/.vercelignore",
+      "bytes": 105,
+      "source_sha256": "85bea267ffd187433f49be0390e0cfd26672889bf27367f6fc0255f6c20b51c1",
+      "snapshot_sha256": "85bea267ffd187433f49be0390e0cfd26672889bf27367f6fc0255f6c20b51c1"
+    },
+    {
+      "path": "api-deployment/README.md",
+      "bytes": 2918,
+      "source_sha256": "189c87a49dd8cc8255a8f555ca31f5d0a81b2687aa81d92fafc95bdc215891d6",
+      "snapshot_sha256": "189c87a49dd8cc8255a8f555ca31f5d0a81b2687aa81d92fafc95bdc215891d6"
+    },
+    {
+      "path": "api-deployment/server.py",
+      "bytes": 227,
+      "source_sha256": "825d7be4042835337658a526244f3b33253445d9bdcc33e1b642907fe00a874c",
+      "snapshot_sha256": "825d7be4042835337658a526244f3b33253445d9bdcc33e1b642907fe00a874c"
+    },
+    {
+      "path": "api-deployment/vercel.json",
+      "bytes": 379,
+      "source_sha256": "83a954e15c450a852b42edd42943bece90a28587716c93c9c7428bc7d0281b07",
+      "snapshot_sha256": "83a954e15c450a852b42edd42943bece90a28587716c93c9c7428bc7d0281b07"
+    },
+    {
+      "path": "backend/.env.example",
+      "bytes": 1418,
+      "source_sha256": "75c2ec1ed730671bbc845cd2af355c2d4440eeb442862c72711ab67efc69a890",
+      "snapshot_sha256": "75c2ec1ed730671bbc845cd2af355c2d4440eeb442862c72711ab67efc69a890"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "bytes": 70,
+      "source_sha256": "2fb9895b902268163499b2e7ec90530b3561de283427875722bef0e7edd07430",
+      "snapshot_sha256": "2fb9895b902268163499b2e7ec90530b3561de283427875722bef0e7edd07430"
+    },
+    {
+      "path": "backend/app/administration.py",
+      "bytes": 20513,
+      "source_sha256": "1b8a2194c8901b53883700964c1b549274dca8f8ec6bce4820dfb84646482a66",
+      "snapshot_sha256": "1b8a2194c8901b53883700964c1b549274dca8f8ec6bce4820dfb84646482a66"
+    },
+    {
+      "path": "backend/app/auth.py",
+      "bytes": 12990,
+      "source_sha256": "db80453be15281baab07665b7e43594028b70d1eaa3bc19643b6a5771da05f97",
+      "snapshot_sha256": "db80453be15281baab07665b7e43594028b70d1eaa3bc19643b6a5771da05f97"
+    },
+    {
+      "path": "backend/app/auth_models.py",
+      "bytes": 2367,
+      "source_sha256": "e2dc7674ed28cae69f2176b5318f12ef2cbad7f240a58b3a98c6ff9eeb70d91a",
+      "snapshot_sha256": "e2dc7674ed28cae69f2176b5318f12ef2cbad7f240a58b3a98c6ff9eeb70d91a"
+    },
+    {
+      "path": "backend/app/auth_routes.py",
+      "bytes": 12746,
+      "source_sha256": "7b3ba0f0596d1fea9b0f2abd075303d853d6fc354aa2310e9a1144bd87b56e28",
+      "snapshot_sha256": "7b3ba0f0596d1fea9b0f2abd075303d853d6fc354aa2310e9a1144bd87b56e28"
+    },
+    {
+      "path": "backend/app/backup.py",
+      "bytes": 1895,
+      "source_sha256": "31b2d26b8e334f02b50813ca962f699c62c77d0ecc8711299e6ae5c1274bf178",
+      "snapshot_sha256": "31b2d26b8e334f02b50813ca962f699c62c77d0ecc8711299e6ae5c1274bf178"
+    },
+    {
+      "path": "backend/app/calendar_admin.py",
+      "bytes": 8049,
+      "source_sha256": "13a7d90976c9c387b7bacc24485c1b736743aa3c0f44740feb5b8c00552673d3",
+      "snapshot_sha256": "13a7d90976c9c387b7bacc24485c1b736743aa3c0f44740feb5b8c00552673d3"
+    },
+    {
+      "path": "backend/app/database.py",
+      "bytes": 41612,
+      "source_sha256": "514774538f98440d4ae268f8b139b4baf7087dd912d5a9a93741f74c219ab315",
+      "snapshot_sha256": "514774538f98440d4ae268f8b139b4baf7087dd912d5a9a93741f74c219ab315"
+    },
+    {
+      "path": "backend/app/engine.py",
+      "bytes": 40667,
+      "source_sha256": "3fb1c366a5ab6155e6c3cc4a9dec5669ad778655aaedd8fae7e4a4bd96ad693f",
+      "snapshot_sha256": "3fb1c366a5ab6155e6c3cc4a9dec5669ad778655aaedd8fae7e4a4bd96ad693f"
+    },
+    {
+      "path": "backend/app/fleet.py",
+      "bytes": 350,
+      "source_sha256": "842ca181cbad55d49e62b670fd8d058630aee49914e4ef51b385ccd821b33883",
+      "snapshot_sha256": "842ca181cbad55d49e62b670fd8d058630aee49914e4ef51b385ccd821b33883"
+    },
+    {
+      "path": "backend/app/fleet_statistics.py",
+      "bytes": 2894,
+      "source_sha256": "9e4f322052c91f8ce4a037ea1116a025f9214efd5f40e9bbc99e7a980cddf552",
+      "snapshot_sha256": "9e4f322052c91f8ce4a037ea1116a025f9214efd5f40e9bbc99e7a980cddf552"
+    },
+    {
+      "path": "backend/app/integrations.py",
+      "bytes": 607,
+      "source_sha256": "efddd7eee64bd2dc9a0752cf2a26a97076baf9e2429fc882a6406a750baba90c",
+      "snapshot_sha256": "efddd7eee64bd2dc9a0752cf2a26a97076baf9e2429fc882a6406a750baba90c"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 46186,
+      "source_sha256": "107feb70521be27de8377bcd149fb6388eb53170675ddd551ee747e90949e33a",
+      "snapshot_sha256": "107feb70521be27de8377bcd149fb6388eb53170675ddd551ee747e90949e33a"
+    },
+    {
+      "path": "backend/app/metrics.py",
+      "bytes": 2916,
+      "source_sha256": "841f71d109b97f442e7298bf072716295d941b0374f9b515d72e4419fdd40251",
+      "snapshot_sha256": "841f71d109b97f442e7298bf072716295d941b0374f9b515d72e4419fdd40251"
+    },
+    {
+      "path": "backend/app/migrate_to_postgres.py",
+      "bytes": 14235,
+      "source_sha256": "12cbb866febdd02ce85f13cf45e68b889e062c47650088baf0a747ac7e86e2d1",
+      "snapshot_sha256": "12cbb866febdd02ce85f13cf45e68b889e062c47650088baf0a747ac7e86e2d1"
+    },
+    {
+      "path": "backend/app/models.py",
+      "bytes": 16696,
+      "source_sha256": "41177fda68f758abc4ec853e3223fe2cfc3dbdc8358de45788270a026ebd5a22",
+      "snapshot_sha256": "41177fda68f758abc4ec853e3223fe2cfc3dbdc8358de45788270a026ebd5a22"
+    },
+    {
+      "path": "backend/app/notifications.py",
+      "bytes": 524,
+      "source_sha256": "e9ba162e4c99f6ac8eb8b6fe98e17fa7a14ab53d680a640c349c4758c138c622",
+      "snapshot_sha256": "e9ba162e4c99f6ac8eb8b6fe98e17fa7a14ab53d680a640c349c4758c138c622"
+    },
+    {
+      "path": "backend/app/odometer.py",
+      "bytes": 2298,
+      "source_sha256": "51a0249d773a2b345eb0b06b6841b970359170b88e44d9268a6c6d9e40624abb",
+      "snapshot_sha256": "51a0249d773a2b345eb0b06b6841b970359170b88e44d9268a6c6d9e40624abb"
+    },
+    {
+      "path": "backend/app/planner.py",
+      "bytes": 10176,
+      "source_sha256": "b9b36ec3115778e5b4d481ae501dd1bf8d596bdb2095ce93e7bcfb247b78335c",
+      "snapshot_sha256": "b9b36ec3115778e5b4d481ae501dd1bf8d596bdb2095ce93e7bcfb247b78335c"
+    },
+    {
+      "path": "backend/app/provision_owner.py",
+      "bytes": 4774,
+      "source_sha256": "64672c24f093a55288a49996e4f3c21e15e94e9a7fef79ca5dd59829b8f5fb29",
+      "snapshot_sha256": "64672c24f093a55288a49996e4f3c21e15e94e9a7fef79ca5dd59829b8f5fb29"
+    },
+    {
+      "path": "backend/app/schemas.py",
+      "bytes": 17081,
+      "source_sha256": "b39362364397467e19dce868c3b2bfb966f9a7523f7636c1f1d82c7f7ead93d1",
+      "snapshot_sha256": "b39362364397467e19dce868c3b2bfb966f9a7523f7636c1f1d82c7f7ead93d1"
+    },
+    {
+      "path": "backend/app/seed.py",
+      "bytes": 8210,
+      "source_sha256": "5e0fb9f0a520b5ac2a50a63a4b65c2111ede062d5f6c13581ba018da4d89ef29",
+      "snapshot_sha256": "5e0fb9f0a520b5ac2a50a63a4b65c2111ede062d5f6c13581ba018da4d89ef29"
+    },
+    {
+      "path": "backend/app/settings.py",
+      "bytes": 4191,
+      "source_sha256": "a3da43c6f3fbf556f042b74d567427c8ce619a13968356e7bfd08563df2253e6",
+      "snapshot_sha256": "a3da43c6f3fbf556f042b74d567427c8ce619a13968356e7bfd08563df2253e6"
+    },
+    {
+      "path": "backend/app/time_utils.py",
+      "bytes": 1045,
+      "source_sha256": "ce803d587acd4c2960971171305e6f2aaf742a61b6a59eeb4f1be7b36462ad60",
+      "snapshot_sha256": "ce803d587acd4c2960971171305e6f2aaf742a61b6a59eeb4f1be7b36462ad60"
+    },
+    {
+      "path": "backend/migrations/001_initial.md",
+      "bytes": 1791,
+      "source_sha256": "3f45024122ffd07731d4d6982b8be1c190cc356359128b7467040e5818d28508",
+      "snapshot_sha256": "3f45024122ffd07731d4d6982b8be1c190cc356359128b7467040e5818d28508"
+    },
+    {
+      "path": "backend/migrations/002_fleet_reliability.md",
+      "bytes": 4211,
+      "source_sha256": "18fd8c4782159f4547412eddd57aba412b703253442122cb8dd43a6846644e1a",
+      "snapshot_sha256": "18fd8c4782159f4547412eddd57aba412b703253442122cb8dd43a6846644e1a"
+    },
+    {
+      "path": "backend/migrations/003_multibrand_fleet.md",
+      "bytes": 2166,
+      "source_sha256": "cdfc17c75293fe7796b7999e5d0238b7d297df6e1159a7026adc64a38f5a36a4",
+      "snapshot_sha256": "cdfc17c75293fe7796b7999e5d0238b7d297df6e1159a7026adc64a38f5a36a4"
+    },
+    {
+      "path": "backend/migrations/004_administrative_calendar.md",
+      "bytes": 1964,
+      "source_sha256": "c158a7f311ffa7685450aba449d1033d2e00ca41ceec465488a2992bf39d8734",
+      "snapshot_sha256": "c158a7f311ffa7685450aba449d1033d2e00ca41ceec465488a2992bf39d8734"
+    },
+    {
+      "path": "backend/migrations/005_vehicle_drivers.md",
+      "bytes": 1448,
+      "source_sha256": "373bc8bd83713420dcc1140212a94bfb5c8544569b185eea8cfd2a3c171143bd",
+      "snapshot_sha256": "373bc8bd83713420dcc1140212a94bfb5c8544569b185eea8cfd2a3c171143bd"
+    },
+    {
+      "path": "backend/pytest.ini",
+      "bytes": 56,
+      "source_sha256": "c28d7ee43186a578bc0f8867e26fdf7edcb0f1275b12d71d85a20e95a524c4ef",
+      "snapshot_sha256": "c28d7ee43186a578bc0f8867e26fdf7edcb0f1275b12d71d85a20e95a524c4ef"
+    },
+    {
+      "path": "backend/requirements.lock.txt",
+      "bytes": 622,
+      "source_sha256": "4b50b65c930f2ca04e9737976547efdb73ce3b9260325a826c7f079d94d76b0b",
+      "snapshot_sha256": "4b50b65c930f2ca04e9737976547efdb73ce3b9260325a826c7f079d94d76b0b"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "bytes": 177,
+      "source_sha256": "4286cbef7800881e8a9bdb8b1e907c91c79c3546392d377034aebb6cdd2db71a",
+      "snapshot_sha256": "4286cbef7800881e8a9bdb8b1e907c91c79c3546392d377034aebb6cdd2db71a"
+    },
+    {
+      "path": "backend/tests/test_accounts.py",
+      "bytes": 23048,
+      "source_sha256": "517d24ca9b2d8077356237c36af9feaff2142fb603f47fd70bd8bcec4fe23b22",
+      "snapshot_sha256": "517d24ca9b2d8077356237c36af9feaff2142fb603f47fd70bd8bcec4fe23b22"
+    },
+    {
+      "path": "backend/tests/test_administration.py",
+      "bytes": 19226,
+      "source_sha256": "979a5e0bbaa37f37c4b3877801c240df9f296e3d7a180ae2f83668918483ccf7",
+      "snapshot_sha256": "979a5e0bbaa37f37c4b3877801c240df9f296e3d7a180ae2f83668918483ccf7"
+    },
+    {
+      "path": "backend/tests/test_api.py",
+      "bytes": 15196,
+      "source_sha256": "4ee3dbfa21a916caf1221af02d1eacf018645b854e700bdbb90b5649e561acc5",
+      "snapshot_sha256": "4ee3dbfa21a916caf1221af02d1eacf018645b854e700bdbb90b5649e561acc5"
+    },
+    {
+      "path": "backend/tests/test_calendar_admin.py",
+      "bytes": 8134,
+      "source_sha256": "6b8740370ba8c8897000e1717e22a9186faee72b060a7d92b96e638afa7fbc13",
+      "snapshot_sha256": "6b8740370ba8c8897000e1717e22a9186faee72b060a7d92b96e638afa7fbc13"
+    },
+    {
+      "path": "backend/tests/test_capacity.py",
+      "bytes": 6126,
+      "source_sha256": "1684026994fc1a9aefe293855427e3dc17141bd6c478a28b0722d08c4cd0d3a3",
+      "snapshot_sha256": "1684026994fc1a9aefe293855427e3dc17141bd6c478a28b0722d08c4cd0d3a3"
+    },
+    {
+      "path": "backend/tests/test_cloud_auth.py",
+      "bytes": 12740,
+      "source_sha256": "67b7b666eea6988ed5659df314494c46f5b10a774fa75d8df7299aa9c8294260",
+      "snapshot_sha256": "67b7b666eea6988ed5659df314494c46f5b10a774fa75d8df7299aa9c8294260"
+    },
+    {
+      "path": "backend/tests/test_data_tools.py",
+      "bytes": 2303,
+      "source_sha256": "b197c02fc6f94888647a1509a9291bc2b776327e61880ba2e35404ee7cd82e5d",
+      "snapshot_sha256": "b197c02fc6f94888647a1509a9291bc2b776327e61880ba2e35404ee7cd82e5d"
+    },
+    {
+      "path": "backend/tests/test_developer_account.py",
+      "bytes": 10786,
+      "source_sha256": "84f439065a76702770269543a696ac4aff632ad13a15e2e0c6b889af591852a4",
+      "snapshot_sha256": "84f439065a76702770269543a696ac4aff632ad13a15e2e0c6b889af591852a4"
+    },
+    {
+      "path": "backend/tests/test_document_evidence.py",
+      "bytes": 7627,
+      "source_sha256": "e81537e232a1d21a008d03f24411591c95bb06e64033d8ee409e6817cc2cfaab",
+      "snapshot_sha256": "e81537e232a1d21a008d03f24411591c95bb06e64033d8ee409e6817cc2cfaab"
+    },
+    {
+      "path": "backend/tests/test_documents_postgres.py",
+      "bytes": 5660,
+      "source_sha256": "ef7d04d32ca14475f7e09c47ad44ec6d93a6da37e78e168908c1880ff6971d08",
+      "snapshot_sha256": "ef7d04d32ca14475f7e09c47ad44ec6d93a6da37e78e168908c1880ff6971d08"
+    },
+    {
+      "path": "backend/tests/test_drivers.py",
+      "bytes": 3789,
+      "source_sha256": "d8b77d193935d593751f57a04f0f111e9679429f023a873d45207442db489eff",
+      "snapshot_sha256": "d8b77d193935d593751f57a04f0f111e9679429f023a873d45207442db489eff"
+    },
+    {
+      "path": "backend/tests/test_engine.py",
+      "bytes": 34194,
+      "source_sha256": "22c9ebfbc8816dc80d4775b22e7a2cd62e830c0c35ff6d4308372178a98ae744",
+      "snapshot_sha256": "22c9ebfbc8816dc80d4775b22e7a2cd62e830c0c35ff6d4308372178a98ae744"
+    },
+    {
+      "path": "backend/tests/test_evidence_captures.py",
+      "bytes": 8195,
+      "source_sha256": "6737ace837ba7e569bc9b321c0c6bba25a08ee757543f438af2c695215e77737",
+      "snapshot_sha256": "6737ace837ba7e569bc9b321c0c6bba25a08ee757543f438af2c695215e77737"
+    },
+    {
+      "path": "backend/tests/test_fleet_statistics.py",
+      "bytes": 5909,
+      "source_sha256": "6883d11922df1d3edcf583a42d1d6cf36fb13ec728baf35fe9e29927fe5d9b57",
+      "snapshot_sha256": "6883d11922df1d3edcf583a42d1d6cf36fb13ec728baf35fe9e29927fe5d9b57"
+    },
+    {
+      "path": "backend/tests/test_migrations_v10.py",
+      "bytes": 8285,
+      "source_sha256": "495b1f5583f673fab3d95dfa8faf6e3857d36b71ea8cc5a3afa48084654df991",
+      "snapshot_sha256": "495b1f5583f673fab3d95dfa8faf6e3857d36b71ea8cc5a3afa48084654df991"
+    },
+    {
+      "path": "backend/tests/test_migrations_v2.py",
+      "bytes": 16758,
+      "source_sha256": "d4f4dc9e749ae92e736c7ee9b92694510f663972786f0144f9c4ecb8b236980a",
+      "snapshot_sha256": "d4f4dc9e749ae92e736c7ee9b92694510f663972786f0144f9c4ecb8b236980a"
+    },
+    {
+      "path": "backend/tests/test_migrations_v4.py",
+      "bytes": 3858,
+      "source_sha256": "5895af86913d7f5f4c8bf8081881a4ae4bb37e4a1b1c06f7e9b010fc4b6f8d28",
+      "snapshot_sha256": "5895af86913d7f5f4c8bf8081881a4ae4bb37e4a1b1c06f7e9b010fc4b6f8d28"
+    },
+    {
+      "path": "backend/tests/test_migrations_v5.py",
+      "bytes": 4435,
+      "source_sha256": "8f1d113434fe704b5b374111a7f0514c5bdcd4056bfaf1458b5cf730a0b53d48",
+      "snapshot_sha256": "8f1d113434fe704b5b374111a7f0514c5bdcd4056bfaf1458b5cf730a0b53d48"
+    },
+    {
+      "path": "backend/tests/test_migrations_v6.py",
+      "bytes": 3935,
+      "source_sha256": "3f60a448631d13576ad1103e49a05c992c2a7b974075336b7146f18d352ea9d3",
+      "snapshot_sha256": "3f60a448631d13576ad1103e49a05c992c2a7b974075336b7146f18d352ea9d3"
+    },
+    {
+      "path": "backend/tests/test_migrations_v7.py",
+      "bytes": 6013,
+      "source_sha256": "78aefa45943e6b9c48014af34d41602ec5f34daa3f34a8d7ea645d25f2c86c90",
+      "snapshot_sha256": "78aefa45943e6b9c48014af34d41602ec5f34daa3f34a8d7ea645d25f2c86c90"
+    },
+    {
+      "path": "backend/tests/test_migrations_v8.py",
+      "bytes": 3696,
+      "source_sha256": "72495250ce10e3183f36a5378a5bbc5988b465a26a70c6ef07266f5aca288bf0",
+      "snapshot_sha256": "72495250ce10e3183f36a5378a5bbc5988b465a26a70c6ef07266f5aca288bf0"
+    },
+    {
+      "path": "backend/tests/test_multibrand.py",
+      "bytes": 3211,
+      "source_sha256": "0ec193d01ee9ea7dd1376d1b8246fa3a789bda7be8a18e2e6b5bfd3fabce1107",
+      "snapshot_sha256": "0ec193d01ee9ea7dd1376d1b8246fa3a789bda7be8a18e2e6b5bfd3fabce1107"
+    },
+    {
+      "path": "backend/tests/test_postgres_migration.py",
+      "bytes": 12381,
+      "source_sha256": "a15f1aa85a62484da3efb379234d28718108041c2303a53884f6e4fcdd15cf32",
+      "snapshot_sha256": "a15f1aa85a62484da3efb379234d28718108041c2303a53884f6e4fcdd15cf32"
+    },
+    {
+      "path": "backend/tests/test_postgres_support.py",
+      "bytes": 5043,
+      "source_sha256": "681a5ea7f4cb4f29a919b88f94941c7a3c83afe0a8ba0c7c9ef5fc7169738a49",
+      "snapshot_sha256": "681a5ea7f4cb4f29a919b88f94941c7a3c83afe0a8ba0c7c9ef5fc7169738a49"
+    },
+    {
+      "path": "backend/tests/test_reliability.py",
+      "bytes": 21602,
+      "source_sha256": "cd4310dc94ab1bba295ba1f6ecb1dc41c4bd9319275bc6e2f6ce13394aa69de3",
+      "snapshot_sha256": "cd4310dc94ab1bba295ba1f6ecb1dc41c4bd9319275bc6e2f6ce13394aa69de3"
+    },
+    {
+      "path": "backend/tests/test_vehicle_onboarding_assignment.py",
+      "bytes": 4145,
+      "source_sha256": "064904921920dbf47d1729ad2fab38e0ca49230e1ab4ad71c71b35014c6df6ca",
+      "snapshot_sha256": "064904921920dbf47d1729ad2fab38e0ca49230e1ab4ad71c71b35014c6df6ca"
+    },
+    {
+      "path": "catalogos/mazda3-mx.v0.1.0.json",
+      "bytes": 103695,
+      "source_sha256": "37414fe9775bf17776f05578206dfc8412c511fad7f98cc2e37456caa80466a5",
+      "snapshot_sha256": "37414fe9775bf17776f05578206dfc8412c511fad7f98cc2e37456caa80466a5"
+    },
+    {
+      "path": "catalogos/variantes-mx.v0.1.0.json",
+      "bytes": 30671,
+      "source_sha256": "34251072cc1d50a2bcde15256ef14132b427db676d61e35f56e2de9717654917",
+      "snapshot_sha256": "34251072cc1d50a2bcde15256ef14132b427db676d61e35f56e2de9717654917"
+    },
+    {
+      "path": "config/policy.json",
+      "bytes": 2872,
+      "source_sha256": "f98d891e3fc8e6baca0267afc9ee6a32e37151653c00b48dee968c6699ac1510",
+      "snapshot_sha256": "f98d891e3fc8e6baca0267afc9ee6a32e37151653c00b48dee968c6699ac1510"
+    },
+    {
+      "path": "docs/contrato-mvp.md",
+      "bytes": 7193,
+      "source_sha256": "6be6a3d6545c987750be755cecc347d0a3cfac01233df29cf6069a49656e63c1",
+      "snapshot_sha256": "6be6a3d6545c987750be755cecc347d0a3cfac01233df29cf6069a49656e63c1"
+    },
+    {
+      "path": "docs/dashboard.md",
+      "bytes": 3019,
+      "source_sha256": "bda43fd822d8fe52b4fc0d4958796274f9cf26aac6f54dec9a0779486169f75b",
+      "snapshot_sha256": "bda43fd822d8fe52b4fc0d4958796274f9cf26aac6f54dec9a0779486169f75b"
+    },
+    {
+      "path": "docs/decisiones-mvp.md",
+      "bytes": 4106,
+      "source_sha256": "46afb9cd5a7fde986ceb8069e0d00c5d47f406e5caccea331a28531fd56db483",
+      "snapshot_sha256": "46afb9cd5a7fde986ceb8069e0d00c5d47f406e5caccea331a28531fd56db483"
+    },
+    {
+      "path": "docs/investigacion-fase-1.md",
+      "bytes": 16709,
+      "source_sha256": "4230827b7bd190b61024ed18b63795a82bfd31107f335b8a0be09c95b0b69cc5",
+      "snapshot_sha256": "4230827b7bd190b61024ed18b63795a82bfd31107f335b8a0be09c95b0b69cc5"
+    },
+    {
+      "path": "docs/modelo-3d.md",
+      "bytes": 5456,
+      "source_sha256": "d8ddd359e1641871e65e6b8a3d5bee2bdbe5606cebf0b86e2c1c033f315d2201",
+      "snapshot_sha256": "d8ddd359e1641871e65e6b8a3d5bee2bdbe5606cebf0b86e2c1c033f315d2201"
+    },
+    {
+      "path": "docs/operacion-datos.md",
+      "bytes": 9003,
+      "source_sha256": "e6f854a9fa557c011c31f37fac67be00fbbb8a8db4aab1e70f838680df01b347",
+      "snapshot_sha256": "e6f854a9fa557c011c31f37fac67be00fbbb8a8db4aab1e70f838680df01b347"
+    },
+    {
+      "path": "docs/propuesta-web.md",
+      "bytes": 2548,
+      "source_sha256": "61c188d01580d49f5eabf423fe48f78f641a848fcc9691320d32f051693afac8",
+      "snapshot_sha256": "61c188d01580d49f5eabf423fe48f78f641a848fcc9691320d32f051693afac8"
+    },
+    {
+      "path": "docs/repositorio-independiente.md",
+      "bytes": 2384,
+      "source_sha256": "89ffa2f807bdfa436f5f2f66e1bbcf654c2ec955d0649344f3b47fb8868e6f3d",
+      "snapshot_sha256": "89ffa2f807bdfa436f5f2f66e1bbcf654c2ec955d0649344f3b47fb8868e6f3d"
+    },
+    {
+      "path": "docs/verificacion-fiabilidad.md",
+      "bytes": 3930,
+      "source_sha256": "88f1f8e3973f0e75a42634a02d5b3f951ce0ec1f327f46c67ad6294b52cc2678",
+      "snapshot_sha256": "88f1f8e3973f0e75a42634a02d5b3f951ce0ec1f327f46c67ad6294b52cc2678"
+    },
+    {
+      "path": "docs/verificacion-mvp.md",
+      "bytes": 3251,
+      "source_sha256": "5c4bfb613858c650f9a54e0b6d96fa135b2bd359e56549d765a349420dd44e8d",
+      "snapshot_sha256": "5c4bfb613858c650f9a54e0b6d96fa135b2bd359e56549d765a349420dd44e8d"
+    },
+    {
+      "path": "frontend/.env.example",
+      "bytes": 908,
+      "source_sha256": "70827e8e5699c314b9cc91173a03e9e743f456459b10375289b186bc42423b0c",
+      "snapshot_sha256": "70827e8e5699c314b9cc91173a03e9e743f456459b10375289b186bc42423b0c"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "bytes": 73,
+      "source_sha256": "ca83c3790f79c7af679b4755fe54f3d0294777cea57fa202295cc8d72e537d09",
+      "snapshot_sha256": "ca83c3790f79c7af679b4755fe54f3d0294777cea57fa202295cc8d72e537d09"
+    },
+    {
+      "path": "frontend/.vercelignore",
+      "bytes": 116,
+      "source_sha256": "064d575af74ecc268bb4778f00fab9ff8b5a47b8c7a406044ac5da4c7c9152d0",
+      "snapshot_sha256": "064d575af74ecc268bb4778f00fab9ff8b5a47b8c7a406044ac5da4c7c9152d0"
+    },
+    {
+      "path": "frontend/AGENTS.md",
+      "bytes": 678,
+      "source_sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb",
+      "snapshot_sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb"
+    },
+    {
+      "path": "frontend/CLAUDE.md",
+      "bytes": 11,
+      "source_sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "snapshot_sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "frontend/README.md",
+      "bytes": 6061,
+      "source_sha256": "a97c53b978301d5e89047fc1012c77557d92ca7b8e775c2fcf68671e31c4c69f",
+      "snapshot_sha256": "a97c53b978301d5e89047fc1012c77557d92ca7b8e775c2fcf68671e31c4c69f"
+    },
+    {
+      "path": "frontend/app/acceso/access-presentation.css",
+      "bytes": 2967,
+      "source_sha256": "60efd4ff1fce9466b24b090dbc68f71382b5d5b6aa871907c4bfabefd6b844fa",
+      "snapshot_sha256": "60efd4ff1fce9466b24b090dbc68f71382b5d5b6aa871907c4bfabefd6b844fa"
+    },
+    {
+      "path": "frontend/app/acceso/page.tsx",
+      "bytes": 3553,
+      "source_sha256": "d45539ad2cd38450074bb7ec353e0da5e66250f11bcae966019bb94a3f1b679e",
+      "snapshot_sha256": "d45539ad2cd38450074bb7ec353e0da5e66250f11bcae966019bb94a3f1b679e"
+    },
+    {
+      "path": "frontend/app/alertas/page.tsx",
+      "bytes": 5078,
+      "source_sha256": "30280ce7ad7d8c2fe92efb3bab008f8f8b9ffa7db61e8d437c635ab263922c0c",
+      "snapshot_sha256": "30280ce7ad7d8c2fe92efb3bab008f8f8b9ffa7db61e8d437c635ab263922c0c"
+    },
+    {
+      "path": "frontend/app/api/backend/[...path]/route.ts",
+      "bytes": 9181,
+      "source_sha256": "0b9b99b2a53c4a064cb4da902b26ae5a7bcea1eca7bdaf8ab4701e02eeafee78",
+      "snapshot_sha256": "0b9b99b2a53c4a064cb4da902b26ae5a7bcea1eca7bdaf8ab4701e02eeafee78"
+    },
+    {
+      "path": "frontend/app/calendario/page.tsx",
+      "bytes": 11010,
+      "source_sha256": "d4f5145edbfd66b4ce87093d18bb0f01a8932d56647a351160ee9f81e90276ce",
+      "snapshot_sha256": "d4f5145edbfd66b4ce87093d18bb0f01a8932d56647a351160ee9f81e90276ce"
+    },
+    {
+      "path": "frontend/app/cuenta/page.tsx",
+      "bytes": 4438,
+      "source_sha256": "bb55766c78c4866d93ddf89e338671dd14d88cbcc13da8f233f829fa6f37ccd0",
+      "snapshot_sha256": "bb55766c78c4866d93ddf89e338671dd14d88cbcc13da8f233f829fa6f37ccd0"
+    },
+    {
+      "path": "frontend/app/dashboard/dashboard-presentation.css",
+      "bytes": 8252,
+      "source_sha256": "33ddfd2126e07a7bb9ccf2b95dc932878097d8e1717dabf7c8b8d8215e089a72",
+      "snapshot_sha256": "33ddfd2126e07a7bb9ccf2b95dc932878097d8e1717dabf7c8b8d8215e089a72"
+    },
+    {
+      "path": "frontend/app/dashboard/dashboard.css",
+      "bytes": 12476,
+      "source_sha256": "194d0b9ae2a69a6c3aed2b265e8e2f5ecb768decbb07cc6b588f33730fe03ed1",
+      "snapshot_sha256": "194d0b9ae2a69a6c3aed2b265e8e2f5ecb768decbb07cc6b588f33730fe03ed1"
+    },
+    {
+      "path": "frontend/app/dashboard/page.tsx",
+      "bytes": 9358,
+      "source_sha256": "06a682ad6607f8df51afb96d3c9e787054cd38199826dc2a382d35e7e7f414da",
+      "snapshot_sha256": "06a682ad6607f8df51afb96d3c9e787054cd38199826dc2a382d35e7e7f414da"
+    },
+    {
+      "path": "frontend/app/error.tsx",
+      "bytes": 398,
+      "source_sha256": "21ea13ce6e438e219eddfcbeccfea6082694da05749690c307e81150a3d6b3ec",
+      "snapshot_sha256": "21ea13ce6e438e219eddfcbeccfea6082694da05749690c307e81150a3d6b3ec"
+    },
+    {
+      "path": "frontend/app/fallas/page.tsx",
+      "bytes": 6537,
+      "source_sha256": "23cf68000cd80728a827f3cfec3e6e8a118a03a1f62b0d1cd2070b251a48bcd3",
+      "snapshot_sha256": "23cf68000cd80728a827f3cfec3e6e8a118a03a1f62b0d1cd2070b251a48bcd3"
+    },
+    {
+      "path": "frontend/app/globals.css",
+      "bytes": 30068,
+      "source_sha256": "d30f4f5f3cf3413078e4c460d6d4d8da03603718825ddd202cc9636ec5fc60e0",
+      "snapshot_sha256": "d30f4f5f3cf3413078e4c460d6d4d8da03603718825ddd202cc9636ec5fc60e0"
+    },
+    {
+      "path": "frontend/app/incidencias/page.tsx",
+      "bytes": 3981,
+      "source_sha256": "030e6b2afacc5aa3aab788d3b43bef1061f9e142587b7dfcdd615714659324c2",
+      "snapshot_sha256": "030e6b2afacc5aa3aab788d3b43bef1061f9e142587b7dfcdd615714659324c2"
+    },
+    {
+      "path": "frontend/app/kilometraje/page.tsx",
+      "bytes": 2805,
+      "source_sha256": "e6bae876b096d4df56d387fb6e4530100673ec8bcdfee3fba3eab5194671d4f3",
+      "snapshot_sha256": "e6bae876b096d4df56d387fb6e4530100673ec8bcdfee3fba3eab5194671d4f3"
+    },
+    {
+      "path": "frontend/app/layout.tsx",
+      "bytes": 603,
+      "source_sha256": "eca56dacd1dd337f562cf5420ee9b3f8b123367e27223477d0f6120b5f8d1ae2",
+      "snapshot_sha256": "eca56dacd1dd337f562cf5420ee9b3f8b123367e27223477d0f6120b5f8d1ae2"
+    },
+    {
+      "path": "frontend/app/normativa/page.tsx",
+      "bytes": 113,
+      "source_sha256": "25c21337ed9b43777d07f4e6a431ced23d6aa5bd51ce342130611f9560825b8f",
+      "snapshot_sha256": "25c21337ed9b43777d07f4e6a431ced23d6aa5bd51ce342130611f9560825b8f"
+    },
+    {
+      "path": "frontend/app/not-found.tsx",
+      "bytes": 312,
+      "source_sha256": "c8b06fae9a87dcf84cac07c721a79b9158910dc4444d2e9abbef199813b21c32",
+      "snapshot_sha256": "c8b06fae9a87dcf84cac07c721a79b9158910dc4444d2e9abbef199813b21c32"
+    },
+    {
+      "path": "frontend/app/page.tsx",
+      "bytes": 7647,
+      "source_sha256": "1f101be232b0f7277845c4103df5bb623efa9c588a3ec4ce497260291c8fba22",
+      "snapshot_sha256": "1f101be232b0f7277845c4103df5bb623efa9c588a3ec4ce497260291c8fba22"
+    },
+    {
+      "path": "frontend/app/usuarios/page.tsx",
+      "bytes": 10944,
+      "source_sha256": "8fefc5fc05c869f0bc8dff385eebe3494cc6931d5ea0632d24251bb9878eef2b",
+      "snapshot_sha256": "8fefc5fc05c869f0bc8dff385eebe3494cc6931d5ea0632d24251bb9878eef2b"
+    },
+    {
+      "path": "frontend/app/vehiculos/[id]/page.tsx",
+      "bytes": 6958,
+      "source_sha256": "d557985af0a7922272e400a008ddef9b3aeb6f2a5e500639664f47a21221a561",
+      "snapshot_sha256": "d557985af0a7922272e400a008ddef9b3aeb6f2a5e500639664f47a21221a561"
+    },
+    {
+      "path": "frontend/components/accounts.css",
+      "bytes": 2530,
+      "source_sha256": "84f42f7fe6cc324a7d998b1e7c879ec74dbc89c16cf76ee85587e7f14b03f4c2",
+      "snapshot_sha256": "84f42f7fe6cc324a7d998b1e7c879ec74dbc89c16cf76ee85587e7f14b03f4c2"
+    },
+    {
+      "path": "frontend/components/add-vehicle.tsx",
+      "bytes": 7310,
+      "source_sha256": "4cc53601b087e6bef9910f35c21fe981de61f6ff31e3b3be76d278d93d78a76c",
+      "snapshot_sha256": "4cc53601b087e6bef9910f35c21fe981de61f6ff31e3b3be76d278d93d78a76c"
+    },
+    {
+      "path": "frontend/components/administration.css",
+      "bytes": 4014,
+      "source_sha256": "5cf9f00e32d12fd47468d4be0156be0af248fad64fe5867f2dece841e4da074c",
+      "snapshot_sha256": "5cf9f00e32d12fd47468d4be0156be0af248fad64fe5867f2dece841e4da074c"
+    },
+    {
+      "path": "frontend/components/archived-normativa.tsx",
+      "bytes": 3604,
+      "source_sha256": "55ff9ad757978ab5c9233b6aa28e8077741efcd9aa8b3cba086ce84cb2735e33",
+      "snapshot_sha256": "55ff9ad757978ab5c9233b6aa28e8077741efcd9aa8b3cba086ce84cb2735e33"
+    },
+    {
+      "path": "frontend/components/calendar-entry-form.tsx",
+      "bytes": 9001,
+      "source_sha256": "2d4477a3ab2bcee99b3b6bc38bca854a4937f37df9c908e7fcd46f81795804cf",
+      "snapshot_sha256": "2d4477a3ab2bcee99b3b6bc38bca854a4937f37df9c908e7fcd46f81795804cf"
+    },
+    {
+      "path": "frontend/components/calendar-service-evidence.tsx",
+      "bytes": 2189,
+      "source_sha256": "ecddac25f7284427250df0f9de66a0cf46bec3fab2b9536f72171f767f123249",
+      "snapshot_sha256": "ecddac25f7284427250df0f9de66a0cf46bec3fab2b9536f72171f767f123249"
+    },
+    {
+      "path": "frontend/components/capture-unit.tsx",
+      "bytes": 1946,
+      "source_sha256": "58d1595b024c4d1744b94dc5f349d0ae44432de63ff9e3a1d20e88a5a55b26eb",
+      "snapshot_sha256": "58d1595b024c4d1744b94dc5f349d0ae44432de63ff9e3a1d20e88a5a55b26eb"
+    },
+    {
+      "path": "frontend/components/disclosure.tsx",
+      "bytes": 2983,
+      "source_sha256": "fedcaf30aca08306486f21b3977ae3aad80f1ce14275b15aefa91f77a22c7611",
+      "snapshot_sha256": "fedcaf30aca08306486f21b3977ae3aad80f1ce14275b15aefa91f77a22c7611"
+    },
+    {
+      "path": "frontend/components/document-expiry-summary.tsx",
+      "bytes": 2370,
+      "source_sha256": "a17ed89f478f12677f87d22981fc37e65ae9a2ce6b4798ece33125812d840fd0",
+      "snapshot_sha256": "a17ed89f478f12677f87d22981fc37e65ae9a2ce6b4798ece33125812d840fd0"
+    },
+    {
+      "path": "frontend/components/document-photos.tsx",
+      "bytes": 3076,
+      "source_sha256": "c806dc16aeac74ef3fd18ec54e8af178854604f79e41365ef666552c8beae6b7",
+      "snapshot_sha256": "c806dc16aeac74ef3fd18ec54e8af178854604f79e41365ef666552c8beae6b7"
+    },
+    {
+      "path": "frontend/components/evidence-attachment.tsx",
+      "bytes": 1891,
+      "source_sha256": "5abc3b4f21f7b81eca0fa0d4278bf65f55709f6a7c393a0ac0e2f54c8d5d3cd8",
+      "snapshot_sha256": "5abc3b4f21f7b81eca0fa0d4278bf65f55709f6a7c393a0ac0e2f54c8d5d3cd8"
+    },
+    {
+      "path": "frontend/components/fleet-metrics.tsx",
+      "bytes": 3044,
+      "source_sha256": "ce31fae735153b6c31dfef26b727986aa8d8a61121d28d047945e2fd1be58f3b",
+      "snapshot_sha256": "ce31fae735153b6c31dfef26b727986aa8d8a61121d28d047945e2fd1be58f3b"
+    },
+    {
+      "path": "frontend/components/incidents.tsx",
+      "bytes": 7321,
+      "source_sha256": "6eecc8f2f2eca483db847cadc0e1944f45fbb2758f58b46a015019ec50430913",
+      "snapshot_sha256": "6eecc8f2f2eca483db847cadc0e1944f45fbb2758f58b46a015019ec50430913"
+    },
+    {
+      "path": "frontend/components/mazda-viewer.module.css",
+      "bytes": 2701,
+      "source_sha256": "bbcacc8e2a51351427d5110d149852c951b5baf10e24166c0542a6639428042c",
+      "snapshot_sha256": "bbcacc8e2a51351427d5110d149852c951b5baf10e24166c0542a6639428042c"
+    },
+    {
+      "path": "frontend/components/mazda-viewer.tsx",
+      "bytes": 5609,
+      "source_sha256": "1a05dfcba263b1bf9765aab06e48eca5d58579c2bb424ead885b868e473c28c3",
+      "snapshot_sha256": "1a05dfcba263b1bf9765aab06e48eca5d58579c2bb424ead885b868e473c28c3"
+    },
+    {
+      "path": "frontend/components/odometer-evidence.tsx",
+      "bytes": 5569,
+      "source_sha256": "6f352ea2a5b4c4551fc7a6f972e70f01332ea150422e42d7be65078fbbf4636d",
+      "snapshot_sha256": "6f352ea2a5b4c4551fc7a6f972e70f01332ea150422e42d7be65078fbbf4636d"
+    },
+    {
+      "path": "frontend/components/official-state-reference.tsx",
+      "bytes": 919,
+      "source_sha256": "c5e1296480b67ce01365caa7adda4cebb8e6b2b829d5cc99edcdf7406c1c6641",
+      "snapshot_sha256": "c5e1296480b67ce01365caa7adda4cebb8e6b2b829d5cc99edcdf7406c1c6641"
+    },
+    {
+      "path": "frontend/components/photo-evidence.tsx",
+      "bytes": 4845,
+      "source_sha256": "c57288cdac5fb6abdfed10f649247ff273ee63a47fa5ab194e1c648a52719e76",
+      "snapshot_sha256": "c57288cdac5fb6abdfed10f649247ff273ee63a47fa5ab194e1c648a52719e76"
+    },
+    {
+      "path": "frontend/components/presentation.css",
+      "bytes": 16350,
+      "source_sha256": "f73fe4cb8f00e27c62af394f8ddb1241b479b66453d244122e7aa4008f32128a",
+      "snapshot_sha256": "f73fe4cb8f00e27c62af394f8ddb1241b479b66453d244122e7aa4008f32128a"
+    },
+    {
+      "path": "frontend/components/section-search.css",
+      "bytes": 3478,
+      "source_sha256": "a01badffeda5a15a71bb3bdae07ebececcde3989e2efe2e7798b16bfc02fd796",
+      "snapshot_sha256": "a01badffeda5a15a71bb3bdae07ebececcde3989e2efe2e7798b16bfc02fd796"
+    },
+    {
+      "path": "frontend/components/section-search.tsx",
+      "bytes": 7827,
+      "source_sha256": "867ad30c857b240bd749ec2caf5c31c1c7d43c080931094516a1e58fcb2e96ca",
+      "snapshot_sha256": "867ad30c857b240bd749ec2caf5c31c1c7d43c080931094516a1e58fcb2e96ca"
+    },
+    {
+      "path": "frontend/components/shell.tsx",
+      "bytes": 5120,
+      "source_sha256": "42c9eb45f8c9f7c572d36a702f9cc86455937ce84863d205a4ac113b39b7f484",
+      "snapshot_sha256": "42c9eb45f8c9f7c572d36a702f9cc86455937ce84863d205a4ac113b39b7f484"
+    },
+    {
+      "path": "frontend/components/simplified.css",
+      "bytes": 17773,
+      "source_sha256": "fdbaefe366067f80b738a6405b57025bef3a7a79acb111876202dbc8b484c898",
+      "snapshot_sha256": "fdbaefe366067f80b738a6405b57025bef3a7a79acb111876202dbc8b484c898"
+    },
+    {
+      "path": "frontend/components/state-regulation-help.tsx",
+      "bytes": 4557,
+      "source_sha256": "0a5851f173b78210ac99d9920e4852c2152fcd603e41340ce21d8a26f2de7fe1",
+      "snapshot_sha256": "0a5851f173b78210ac99d9920e4852c2152fcd603e41340ce21d8a26f2de7fe1"
+    },
+    {
+      "path": "frontend/components/ui.tsx",
+      "bytes": 6402,
+      "source_sha256": "ca102284d7310a08f39d95ff350cf2c5b31b69a009eeca95ddca8418161ead6f",
+      "snapshot_sha256": "ca102284d7310a08f39d95ff350cf2c5b31b69a009eeca95ddca8418161ead6f"
+    },
+    {
+      "path": "frontend/components/vehicle-administration.tsx",
+      "bytes": 12927,
+      "source_sha256": "a2c90030f07e4767ddb2f5dbe796bdc5dfd788a230f3a8b415328354d125ad51",
+      "snapshot_sha256": "a2c90030f07e4767ddb2f5dbe796bdc5dfd788a230f3a8b415328354d125ad51"
+    },
+    {
+      "path": "frontend/components/vehicle-drivers.tsx",
+      "bytes": 2576,
+      "source_sha256": "a4359a28503987b69c58bbe81139caf6e4804ecf802832c79a8d13ac70cf1a96",
+      "snapshot_sha256": "a4359a28503987b69c58bbe81139caf6e4804ecf802832c79a8d13ac70cf1a96"
+    },
+    {
+      "path": "frontend/components/vehicle-records.tsx",
+      "bytes": 13319,
+      "source_sha256": "1c28d2890c0167f076be2143a39960773fdd7f9bef02c0cb8d2a6bdaca76eaa1",
+      "snapshot_sha256": "1c28d2890c0167f076be2143a39960773fdd7f9bef02c0cb8d2a6bdaca76eaa1"
+    },
+    {
+      "path": "frontend/components/vehicle-search-fields.tsx",
+      "bytes": 911,
+      "source_sha256": "23a30c9ad128aee93f4cfcdec61c15fd36a1bb55dade64483fd31baae4ae47ac",
+      "snapshot_sha256": "23a30c9ad128aee93f4cfcdec61c15fd36a1bb55dade64483fd31baae4ae47ac"
+    },
+    {
+      "path": "frontend/e2e/accounts.spec.ts",
+      "bytes": 20691,
+      "source_sha256": "0b741cd7f216638872d99ef6857143deda05e719d60fcc66fd014452c66b2ab3",
+      "snapshot_sha256": "0b741cd7f216638872d99ef6857143deda05e719d60fcc66fd014452c66b2ab3"
+    },
+    {
+      "path": "frontend/e2e/administration-helpers.spec.ts",
+      "bytes": 1628,
+      "source_sha256": "1d034252f09b22bc447a4189f299bb85d5bcc560380c3b214484f5a288432dee",
+      "snapshot_sha256": "1d034252f09b22bc447a4189f299bb85d5bcc560380c3b214484f5a288432dee"
+    },
+    {
+      "path": "frontend/e2e/administration-jurisdictions-helpers.spec.ts",
+      "bytes": 4051,
+      "source_sha256": "5cef693b10c1bb8f85eda8086ef3bdf8e045a88716c5fb8e6b7f67939c12b0be",
+      "snapshot_sha256": "5cef693b10c1bb8f85eda8086ef3bdf8e045a88716c5fb8e6b7f67939c12b0be"
+    },
+    {
+      "path": "frontend/e2e/administration-queretaro-helpers.spec.ts",
+      "bytes": 1931,
+      "source_sha256": "ce33985d09f5e9bd4820e489569285762dc887b04b4eefffd245d87c3dde7b02",
+      "snapshot_sha256": "ce33985d09f5e9bd4820e489569285762dc887b04b4eefffd245d87c3dde7b02"
+    },
+    {
+      "path": "frontend/e2e/administration.spec.ts",
+      "bytes": 22934,
+      "source_sha256": "028e84f9daf6070a95b3db79e31b2862b6d262bf4e5565c69a05b4ff7d98b610",
+      "snapshot_sha256": "028e84f9daf6070a95b3db79e31b2862b6d262bf4e5565c69a05b4ff7d98b610"
+    },
+    {
+      "path": "frontend/e2e/calendar-admin.spec.ts",
+      "bytes": 8504,
+      "source_sha256": "2698388bae2e0f1255de988d2d9f89091acee537750c9f4e91a1255fec4e9201",
+      "snapshot_sha256": "2698388bae2e0f1255de988d2d9f89091acee537750c9f4e91a1255fec4e9201"
+    },
+    {
+      "path": "frontend/e2e/cloud-security-helpers.spec.ts",
+      "bytes": 12578,
+      "source_sha256": "a331f69516dbb400cd3be98a619185ff71ce5fafd7b043f3ce0c3e7cc838cb4f",
+      "snapshot_sha256": "a331f69516dbb400cd3be98a619185ff71ce5fafd7b043f3ce0c3e7cc838cb4f"
+    },
+    {
+      "path": "frontend/e2e/dashboard-helpers.spec.ts",
+      "bytes": 11193,
+      "source_sha256": "a20f19e1ab9dd8d39a19f2507939b20dcee9200ed0a690f5d5582339e50a061f",
+      "snapshot_sha256": "a20f19e1ab9dd8d39a19f2507939b20dcee9200ed0a690f5d5582339e50a061f"
+    },
+    {
+      "path": "frontend/e2e/dashboard.spec.ts",
+      "bytes": 12998,
+      "source_sha256": "b97aa89b796b565dbce0dbf4be75def5c68608426065989d9c8be5f7a3e3b9ed",
+      "snapshot_sha256": "b97aa89b796b565dbce0dbf4be75def5c68608426065989d9c8be5f7a3e3b9ed"
+    },
+    {
+      "path": "frontend/e2e/developer-access.spec.ts",
+      "bytes": 7116,
+      "source_sha256": "6cb2b41b4415f0bb07a8b0a112b29b088092304cde5e9b10ad2c2e94237f2d4c",
+      "snapshot_sha256": "6cb2b41b4415f0bb07a8b0a112b29b088092304cde5e9b10ad2c2e94237f2d4c"
+    },
+    {
+      "path": "frontend/e2e/document-photos.spec.ts",
+      "bytes": 7329,
+      "source_sha256": "c8d6b61c045ae2d2a9aef0c9107bee5868e74cb41a0b810b489d44bfbebf28a4",
+      "snapshot_sha256": "c8d6b61c045ae2d2a9aef0c9107bee5868e74cb41a0b810b489d44bfbebf28a4"
+    },
+    {
+      "path": "frontend/e2e/documents-inline.spec.ts",
+      "bytes": 8571,
+      "source_sha256": "07bc3bab29fe8cd6ec197c12108337b0fb491eb3a119082d3392c20bbc634ca0",
+      "snapshot_sha256": "07bc3bab29fe8cd6ec197c12108337b0fb491eb3a119082d3392c20bbc634ca0"
+    },
+    {
+      "path": "frontend/e2e/fault-resolution.proposal.spec.ts",
+      "bytes": 8531,
+      "source_sha256": "4177a95a62fe9669b0f6a1a5e56e42d557dfc9865be954179ae1d69c09b0696f",
+      "snapshot_sha256": "4177a95a62fe9669b0f6a1a5e56e42d557dfc9865be954179ae1d69c09b0696f"
+    },
+    {
+      "path": "frontend/e2e/local-mvp.spec.ts",
+      "bytes": 8294,
+      "source_sha256": "985f1f3e2bd10ca0e2f4d4980f5d89cdf67d1731829fbe3630986f76bd49e8a6",
+      "snapshot_sha256": "985f1f3e2bd10ca0e2f4d4980f5d89cdf67d1731829fbe3630986f76bd49e8a6"
+    },
+    {
+      "path": "frontend/e2e/manual-capture-helpers.spec.ts",
+      "bytes": 1094,
+      "source_sha256": "7dd2471cf52f238ae817b6d6f7b9e6fe5ff713adb29df6567b4ca68d33cfee8a",
+      "snapshot_sha256": "7dd2471cf52f238ae817b6d6f7b9e6fe5ff713adb29df6567b4ca68d33cfee8a"
+    },
+    {
+      "path": "frontend/e2e/mazda-viewer.spec.ts",
+      "bytes": 20176,
+      "source_sha256": "a4170c4e037ae1e8b09497eb266450c1cea0eadfbd1b5de1490c78d0b2adbdf4",
+      "snapshot_sha256": "a4170c4e037ae1e8b09497eb266450c1cea0eadfbd1b5de1490c78d0b2adbdf4"
+    },
+    {
+      "path": "frontend/e2e/onboarding-simplification.spec.ts",
+      "bytes": 10642,
+      "source_sha256": "33d57bbd231ef29b62dd8157f27741d7348eeae5a99f8bf9552808930d6b30a0",
+      "snapshot_sha256": "33d57bbd231ef29b62dd8157f27741d7348eeae5a99f8bf9552808930d6b30a0"
+    },
+    {
+      "path": "frontend/e2e/operational-helpers.spec.ts",
+      "bytes": 2796,
+      "source_sha256": "aca03e4f89fce6c5400fcba97bad66be683b3a90bae7ebc4ed635c5c138c2947",
+      "snapshot_sha256": "aca03e4f89fce6c5400fcba97bad66be683b3a90bae7ebc4ed635c5c138c2947"
+    },
+    {
+      "path": "frontend/e2e/photo-optimization.spec.ts",
+      "bytes": 4961,
+      "source_sha256": "3356f5f7d3f16886a9ed1e42bc5127f01da7c541937acf3bbd761a7691492328",
+      "snapshot_sha256": "3356f5f7d3f16886a9ed1e42bc5127f01da7c541937acf3bbd761a7691492328"
+    },
+    {
+      "path": "frontend/e2e/presentation.spec.ts",
+      "bytes": 20071,
+      "source_sha256": "0a485970deb2b5141697d6f929ba53c913d14f0dd48e77663d181ab7e9f3f2fb",
+      "snapshot_sha256": "0a485970deb2b5141697d6f929ba53c913d14f0dd48e77663d181ab7e9f3f2fb"
+    },
+    {
+      "path": "frontend/e2e/proposal-evidence-helpers.spec.ts",
+      "bytes": 4380,
+      "source_sha256": "ab3c60d7185d37a9a5f13a41a7d1599e0f5d4057693e478ba570434ad3543722",
+      "snapshot_sha256": "ab3c60d7185d37a9a5f13a41a7d1599e0f5d4057693e478ba570434ad3543722"
+    },
+    {
+      "path": "frontend/e2e/public-administration.spec.ts",
+      "bytes": 8566,
+      "source_sha256": "7b285d1c6f2413fbaad6aa2b72c96892ea0def0d1b3afa7c7b4dfef887943b2a",
+      "snapshot_sha256": "7b285d1c6f2413fbaad6aa2b72c96892ea0def0d1b3afa7c7b4dfef887943b2a"
+    },
+    {
+      "path": "frontend/e2e/public-dashboard.spec.ts",
+      "bytes": 7726,
+      "source_sha256": "4f14a58a400551bd7c08341e64137a8abd48aa023ae033ee9fb651fcab882cf8",
+      "snapshot_sha256": "4f14a58a400551bd7c08341e64137a8abd48aa023ae033ee9fb651fcab882cf8"
+    },
+    {
+      "path": "frontend/e2e/public-proposal.spec.ts",
+      "bytes": 9310,
+      "source_sha256": "f87d310e1ab06006371ed4242177e8f4faf59c190f42e2fa3cc2132d3f0892ee",
+      "snapshot_sha256": "f87d310e1ab06006371ed4242177e8f4faf59c190f42e2fa3cc2132d3f0892ee"
+    },
+    {
+      "path": "frontend/e2e/quiet-ui.proposal.spec.ts",
+      "bytes": 14349,
+      "source_sha256": "971041736e03437ba5511b12ac7cde3f2ad8d1101feaedfb3f52795537a67ed2",
+      "snapshot_sha256": "971041736e03437ba5511b12ac7cde3f2ad8d1101feaedfb3f52795537a67ed2"
+    },
+    {
+      "path": "frontend/e2e/registration-simplification.spec.ts",
+      "bytes": 6355,
+      "source_sha256": "d4f629bae066c75809395cb7bdeec1768cb160ac5d8c30a5a2c7109d617375c8",
+      "snapshot_sha256": "d4f629bae066c75809395cb7bdeec1768cb160ac5d8c30a5a2c7109d617375c8"
+    },
+    {
+      "path": "frontend/e2e/reliability-ui.spec.ts",
+      "bytes": 13771,
+      "source_sha256": "ab57e9aea2cb7b93900cefa233f17e91009d81f6c73d23b9bb1cfa1c3e754c40",
+      "snapshot_sha256": "ab57e9aea2cb7b93900cefa233f17e91009d81f6c73d23b9bb1cfa1c3e754c40"
+    },
+    {
+      "path": "frontend/e2e/section-search.spec.ts",
+      "bytes": 9035,
+      "source_sha256": "d4451f19429b547555a6c28794d2b185329e3da4bb4f53508b7a1d07b096cb11",
+      "snapshot_sha256": "d4451f19429b547555a6c28794d2b185329e3da4bb4f53508b7a1d07b096cb11"
+    },
+    {
+      "path": "frontend/lib/api.ts",
+      "bytes": 4033,
+      "source_sha256": "0c005318d3fa862c5c33c98b08bf4a0178c78e580b0f2b505c6b2f83680f9334",
+      "snapshot_sha256": "0c005318d3fa862c5c33c98b08bf4a0178c78e580b0f2b505c6b2f83680f9334"
+    },
+    {
+      "path": "frontend/lib/auth-context.tsx",
+      "bytes": 3606,
+      "source_sha256": "c3efd165a3ba54f13a9baf2ce25d1db3b58479ce5baa5718079863af2b698e10",
+      "snapshot_sha256": "c3efd165a3ba54f13a9baf2ce25d1db3b58479ce5baa5718079863af2b698e10"
+    },
+    {
+      "path": "frontend/lib/dashboard.ts",
+      "bytes": 8088,
+      "source_sha256": "82ff4b53fa291762d6c13609ddb0e3693f68c5b7bc25cef0e80a042a5f06e10c",
+      "snapshot_sha256": "82ff4b53fa291762d6c13609ddb0e3693f68c5b7bc25cef0e80a042a5f06e10c"
+    },
+    {
+      "path": "frontend/lib/dates.ts",
+      "bytes": 2158,
+      "source_sha256": "843fc870e1f0eef7a7c309986756e36012f1a655925cc48181e1f60e6c8a44df",
+      "snapshot_sha256": "843fc870e1f0eef7a7c309986756e36012f1a655925cc48181e1f60e6c8a44df"
+    },
+    {
+      "path": "frontend/lib/drivers.ts",
+      "bytes": 1112,
+      "source_sha256": "cbb0c0dead827ac2b06653263c8657ff2593387efde1fed2e5a5dad01ea2cad1",
+      "snapshot_sha256": "cbb0c0dead827ac2b06653263c8657ff2593387efde1fed2e5a5dad01ea2cad1"
+    },
+    {
+      "path": "frontend/lib/feature-flags.ts",
+      "bytes": 379,
+      "source_sha256": "01f9a047cee6ede302c2f3d85b9bca3a3642fa25a522c3df039f86c8b7f88220",
+      "snapshot_sha256": "01f9a047cee6ede302c2f3d85b9bca3a3642fa25a522c3df039f86c8b7f88220"
+    },
+    {
+      "path": "frontend/lib/fleet-order.ts",
+      "bytes": 482,
+      "source_sha256": "559e54a2773f4e3d7db8d63951f2fa3c0b46cbb2f2af11aceda4605ea6a138e0",
+      "snapshot_sha256": "559e54a2773f4e3d7db8d63951f2fa3c0b46cbb2f2af11aceda4605ea6a138e0"
+    },
+    {
+      "path": "frontend/lib/local-security.ts",
+      "bytes": 4017,
+      "source_sha256": "b517f4433c64aec2ce29639de030d67bc8e0d035ad396fbae67ebbaa9e9ec2a4",
+      "snapshot_sha256": "b517f4433c64aec2ce29639de030d67bc8e0d035ad396fbae67ebbaa9e9ec2a4"
+    },
+    {
+      "path": "frontend/lib/manual-capture.ts",
+      "bytes": 1007,
+      "source_sha256": "131a5c21aeccc29d233d20745794570798d61f665d60488a86432192886c91e0",
+      "snapshot_sha256": "131a5c21aeccc29d233d20745794570798d61f665d60488a86432192886c91e0"
+    },
+    {
+      "path": "frontend/lib/mazda-model.ts",
+      "bytes": 637,
+      "source_sha256": "271addce456960d6d868428d48de914d194d3dc64f3130f643aed8798af80f8f",
+      "snapshot_sha256": "271addce456960d6d868428d48de914d194d3dc64f3130f643aed8798af80f8f"
+    },
+    {
+      "path": "frontend/lib/mazda-scene.ts",
+      "bytes": 10009,
+      "source_sha256": "24fae159a4fbd0ff851294f43dd1f65dc49709f0ac49fec23f37ab018b2e3a9d",
+      "snapshot_sha256": "24fae159a4fbd0ff851294f43dd1f65dc49709f0ac49fec23f37ab018b2e3a9d"
+    },
+    {
+      "path": "frontend/lib/official-state-sources.ts",
+      "bytes": 7193,
+      "source_sha256": "50e7de01f91b28881429b82c5204dd331e75f14846537c3d72ded3e7f1d86760",
+      "snapshot_sha256": "50e7de01f91b28881429b82c5204dd331e75f14846537c3d72ded3e7f1d86760"
+    },
+    {
+      "path": "frontend/lib/photos.ts",
+      "bytes": 2760,
+      "source_sha256": "221e6cf14ac6439195f9908d8b30a07b0317b1d7e0d6cc0ec16bb8b3c044d4e8",
+      "snapshot_sha256": "221e6cf14ac6439195f9908d8b30a07b0317b1d7e0d6cc0ec16bb8b3c044d4e8"
+    },
+    {
+      "path": "frontend/lib/proposal-api.ts",
+      "bytes": 46698,
+      "source_sha256": "009ca6866273d2828e2d31e3f5026e40e34f939cc600b14d2643f95d4847e70c",
+      "snapshot_sha256": "009ca6866273d2828e2d31e3f5026e40e34f939cc600b14d2643f95d4847e70c"
+    },
+    {
+      "path": "frontend/lib/proposal-mode.ts",
+      "bytes": 157,
+      "source_sha256": "ee6d9c815c7c881a7b09d19c19716208b30ebdddf85260fd7979499493b542ec",
+      "snapshot_sha256": "ee6d9c815c7c881a7b09d19c19716208b30ebdddf85260fd7979499493b542ec"
+    },
+    {
+      "path": "frontend/lib/queretaro-verification.ts",
+      "bytes": 1016,
+      "source_sha256": "5ad70d351016414971124d8bfa266e7c67fb97c7dc92cd625bd0a92d4bb0d738",
+      "snapshot_sha256": "5ad70d351016414971124d8bfa266e7c67fb97c7dc92cd625bd0a92d4bb0d738"
+    },
+    {
+      "path": "frontend/lib/section-navigation.ts",
+      "bytes": 5475,
+      "source_sha256": "a2e16cb1b60f3300188045c1a34d9e7a41f93941ec560450192a5375db8472ea",
+      "snapshot_sha256": "a2e16cb1b60f3300188045c1a34d9e7a41f93941ec560450192a5375db8472ea"
+    },
+    {
+      "path": "frontend/lib/state-sources-north.ts",
+      "bytes": 9089,
+      "source_sha256": "5ca1a189c83033d98aa6e60e9c5630499eab3afc61efeec8a823e9a3463db1b1",
+      "snapshot_sha256": "5ca1a189c83033d98aa6e60e9c5630499eab3afc61efeec8a823e9a3463db1b1"
+    },
+    {
+      "path": "frontend/lib/state-sources-south.ts",
+      "bytes": 7650,
+      "source_sha256": "20d8b55c066ffc6a74ee75cdfab0e57bc45182e4d40d4cbf0ea4ade9e12e5652",
+      "snapshot_sha256": "20d8b55c066ffc6a74ee75cdfab0e57bc45182e4d40d4cbf0ea4ade9e12e5652"
+    },
+    {
+      "path": "frontend/lib/types.ts",
+      "bytes": 6337,
+      "source_sha256": "ff1c1d9a0446a16d3af0d390f0ccc7ba45945eba6235b5d4ae251f7fb6066916",
+      "snapshot_sha256": "ff1c1d9a0446a16d3af0d390f0ccc7ba45945eba6235b5d4ae251f7fb6066916"
+    },
+    {
+      "path": "frontend/lib/vehicle-administration.ts",
+      "bytes": 3059,
+      "source_sha256": "43e5bce52cbf772fc85015a258102c104bd133da1a6494f9ddab12d6df10195b",
+      "snapshot_sha256": "43e5bce52cbf772fc85015a258102c104bd133da1a6494f9ddab12d6df10195b"
+    },
+    {
+      "path": "frontend/lib/vehicle-jurisdictions.ts",
+      "bytes": 9436,
+      "source_sha256": "2f7cc21ac7cc9582486cadd810b6d3d2fb861f264bc879d7ba1977018a60f0af",
+      "snapshot_sha256": "2f7cc21ac7cc9582486cadd810b6d3d2fb861f264bc879d7ba1977018a60f0af"
+    },
+    {
+      "path": "frontend/next.config.ts",
+      "bytes": 1011,
+      "source_sha256": "ce2464adeea8e4f214b6976a8e36661ff9823e6583bbfba49318d2559723245b",
+      "snapshot_sha256": "ce2464adeea8e4f214b6976a8e36661ff9823e6583bbfba49318d2559723245b"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 38847,
+      "source_sha256": "0470753c2443a4b379101393a7bae7161cf82c21926d2d8a5c0c646f909b8608",
+      "snapshot_sha256": "0470753c2443a4b379101393a7bae7161cf82c21926d2d8a5c0c646f909b8608"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 716,
+      "source_sha256": "d4201c3fd9110e1fb74a1f554e6debdee7bd51c73c1adf3f6a2a78643a0f5ed2",
+      "snapshot_sha256": "d4201c3fd9110e1fb74a1f554e6debdee7bd51c73c1adf3f6a2a78643a0f5ed2"
+    },
+    {
+      "path": "frontend/playwright.administration.config.ts",
+      "bytes": 2201,
+      "source_sha256": "9d131201951d0b8b4da2ea8d23f695fb461874dbf53c86ce8ee9ae3086d89648",
+      "snapshot_sha256": "9d131201951d0b8b4da2ea8d23f695fb461874dbf53c86ce8ee9ae3086d89648"
+    },
+    {
+      "path": "frontend/playwright.cloud-security.config.ts",
+      "bytes": 567,
+      "source_sha256": "8be7ab8823e4b96866667b65adbf44dfa3f072c018ac59780276b3a4f70defe3",
+      "snapshot_sha256": "8be7ab8823e4b96866667b65adbf44dfa3f072c018ac59780276b3a4f70defe3"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 530,
+      "source_sha256": "ea8411b383549093e9458fb3c3d32a8a16bdd1238b95e5c73304b82dba2961ee",
+      "snapshot_sha256": "ea8411b383549093e9458fb3c3d32a8a16bdd1238b95e5c73304b82dba2961ee"
+    },
+    {
+      "path": "frontend/playwright.dashboard-statistics.config.ts",
+      "bytes": 882,
+      "source_sha256": "bae60456b1b3b2fdb0d53d213d76ff3b7128c91f76798783a48bba459417b6cd",
+      "snapshot_sha256": "bae60456b1b3b2fdb0d53d213d76ff3b7128c91f76798783a48bba459417b6cd"
+    },
+    {
+      "path": "frontend/playwright.developer-access.config.ts",
+      "bytes": 1002,
+      "source_sha256": "e871dfef7d67a0901959378e06bb3f44838451e290ce57feed27eee0f5e36d6f",
+      "snapshot_sha256": "e871dfef7d67a0901959378e06bb3f44838451e290ce57feed27eee0f5e36d6f"
+    },
+    {
+      "path": "frontend/playwright.fault-resolution.config.ts",
+      "bytes": 772,
+      "source_sha256": "839b2c84ad3bf3ac57715cc7fae2d0204d3125e197b960c761938b6a790763ae",
+      "snapshot_sha256": "839b2c84ad3bf3ac57715cc7fae2d0204d3125e197b960c761938b6a790763ae"
+    },
+    {
+      "path": "frontend/playwright.onboarding.config.ts",
+      "bytes": 1073,
+      "source_sha256": "f68394e9d70596337c45fe52b24a9e4ed63966503012385c8d05aff136497b50",
+      "snapshot_sha256": "f68394e9d70596337c45fe52b24a9e4ed63966503012385c8d05aff136497b50"
+    },
+    {
+      "path": "frontend/playwright.presentation.config.ts",
+      "bytes": 1030,
+      "source_sha256": "26a21ac2e5f4adb8cf5def418a2ed63d285d8d7a137c0b6eda7774af57172aa3",
+      "snapshot_sha256": "26a21ac2e5f4adb8cf5def418a2ed63d285d8d7a137c0b6eda7774af57172aa3"
+    },
+    {
+      "path": "frontend/playwright.proposal-administration.config.ts",
+      "bytes": 931,
+      "source_sha256": "c059967576e6ceae05ae7698b78aaac33d0a592a18af966f0aada1c730120a9c",
+      "snapshot_sha256": "c059967576e6ceae05ae7698b78aaac33d0a592a18af966f0aada1c730120a9c"
+    },
+    {
+      "path": "frontend/playwright.quiet-proposal.config.ts",
+      "bytes": 790,
+      "source_sha256": "1f6ffc6e5ccc8988130021c415e9087b75757dffe1d299e58e9b459f07142f1b",
+      "snapshot_sha256": "1f6ffc6e5ccc8988130021c415e9087b75757dffe1d299e58e9b459f07142f1b"
+    },
+    {
+      "path": "frontend/playwright.section-search.config.ts",
+      "bytes": 1105,
+      "source_sha256": "85aba48a95c93db1d6bb805248faf793bfebd5a33ac93dded46c010ff791388c",
+      "snapshot_sha256": "85aba48a95c93db1d6bb805248faf793bfebd5a33ac93dded46c010ff791388c"
+    },
+    {
+      "path": "frontend/proxy.ts",
+      "bytes": 1012,
+      "source_sha256": "a8e966d88ce13cd655a90a13f6bc1382f186206d5e17f24518183bcd3e4bd841",
+      "snapshot_sha256": "a8e966d88ce13cd655a90a13f6bc1382f186206d5e17f24518183bcd3e4bd841"
+    },
+    {
+      "path": "frontend/public/models/mazda3-hatchback-2020-local-preview.jpg",
+      "bytes": 40475,
+      "source_sha256": "16c98a19529eb2369abc7cf544032100de970fc51cd2500bbe99d3028f6b7b46",
+      "snapshot_sha256": "16c98a19529eb2369abc7cf544032100de970fc51cd2500bbe99d3028f6b7b46"
+    },
+    {
+      "path": "frontend/public/models/mazda3-hatchback-2020.glb",
+      "bytes": 13282052,
+      "source_sha256": "6c0233e309c8ec096bf941d0e4ea1bff5a6d62a483cb1e4abba97570dd2a54ee",
+      "snapshot_sha256": "6c0233e309c8ec096bf941d0e4ea1bff5a6d62a483cb1e4abba97570dd2a54ee"
+    },
+    {
+      "path": "frontend/public/proposal/fleet.json",
+      "bytes": 1365385,
+      "source_sha256": "023657cf1b2da5ae41e4c5ad2d6aba46fee8ec82a96887c111b9e63890f0a212",
+      "snapshot_sha256": "023657cf1b2da5ae41e4c5ad2d6aba46fee8ec82a96887c111b9e63890f0a212"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 3622,
+      "source_sha256": "a5547d5c8f68b17fb15edbac67aa6817f472cc010c8dc764d384c2f6fb002c7f",
+      "snapshot_sha256": "a5547d5c8f68b17fb15edbac67aa6817f472cc010c8dc764d384c2f6fb002c7f"
+    },
+    {
+      "path": "frontend/vercel.json",
+      "bytes": 348,
+      "source_sha256": "3460f87586fd08a88a0639f3588c8d35fdc35afd49576e2c7e6531d1c8ccd310",
+      "snapshot_sha256": "3460f87586fd08a88a0639f3588c8d35fdc35afd49576e2c7e6531d1c8ccd310"
+    },
+    {
+      "path": "scripts/dev.ps1",
+      "bytes": 6637,
+      "source_sha256": "4236506d861e6c9e9c590a632a2ac46026db98f0254d739e5c464720e8947b4c",
+      "snapshot_sha256": "4236506d861e6c9e9c590a632a2ac46026db98f0254d739e5c464720e8947b4c"
+    },
+    {
+      "path": "scripts/export-proposal.py",
+      "bytes": 3325,
+      "source_sha256": "1d5a61bf4614f391512d8b13369ffc31979445a2627c26b53ceb539e5ced0379",
+      "snapshot_sha256": "1d5a61bf4614f391512d8b13369ffc31979445a2627c26b53ceb539e5ced0379"
+    },
+    {
+      "path": "scripts/package-api.ps1",
+      "bytes": 1887,
+      "source_sha256": "c9b06a085256b2499dd06ed98b8486b488c09bff8d1fd2db728051e2a92f3197",
+      "snapshot_sha256": "c9b06a085256b2499dd06ed98b8486b488c09bff8d1fd2db728051e2a92f3197"
+    }
+  ]
+}

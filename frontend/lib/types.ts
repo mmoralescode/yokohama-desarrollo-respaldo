@@ -1,0 +1,43 @@
+export type Severity = "critico" | "importante" | "menor";
+export type TrafficLight = "red" | "amber" | "green" | "gray";
+export type Confidence = "alta" | "media" | "baja";
+export interface Vehicle {
+  id: number; vin: string; plate: string; make: string; model: string; model_year: number; variant_id: string | null;
+  version: string; body_style: string; engine: string; transmission: string; drive: string;
+  fuel_type?: string | null; color?: string | null; maintenance_catalog?: string | null;
+  current_km: number; in_service_date: string; usage_regime: string; is_synthetic: boolean; severity_multiplier?: number; drivers?: string[];
+  nickname?: string | null; registration_state?: string | null; verification_period_start?: string | null; verification_period_end?: string | null;
+  circulation_card_expires_on?: string | null; document_alert_days?: number;
+  plates_expires_on?: string | null; vehicle_tax_due_on?: string | null; vehicle_tax_paid_on?: string | null; administrative_notes?: string | null;
+}
+export interface AdministrationChange {id: number | string; vehicle_id: number; changed_at: string; changed_by: number | null; previous_values: Record<string, string | number | null>; new_values: Record<string, string | number | null>}
+export interface PhotoInput {filename: string; data_url: string}
+export type DocumentType = "verification" | "circulation" | "plates" | "vehicle_tax" | "other";
+export interface Evidence {id: string; vehicle_id: number; filename: string; mime_type: string; captured_at: string; captured_by?: number | null; notes?: string; reading_id?: number | null; incident_id?: string | null; fault_id?: number | null; service_id?: number | null; downtime_id?: number | null; document_type?: DocumentType | null; observed_on?: string; odometer_km?: number; data_url?: string}
+export type IncidentCategory = "accidente" | "averia" | "documentacion" | "otro";
+export type IncidentStatus = "abierta" | "en_revision" | "resuelta";
+export interface Incident {id: string; vehicle_id: number; plate: string; nickname?: string | null; occurred_on: string; category: IncidentCategory; description: string; status: IncidentStatus; captured_at: string; captured_by?: number | null; resolution_notes?: string | null; photos: Evidence[]}
+export interface VehicleSummary extends Vehicle {traffic_light: TrafficLight; next_visit_date: string | null; open_alerts: number; usage_km_per_day: number | null}
+export interface Reading {id: number; vehicle_id: number; date: string; recorded_at?: string; source?: "manual" | "gps" | "obd"; odometer_km: number; captured_by?: number | null; captured_at?: string; photos?: Evidence[]}
+export type MaintenanceType = "preventive" | "corrective" | "unknown";
+export interface ServiceHistory {id: number; service_id: string; performed_on: string; odometer_km: number | null; notes: string; captured_at?: string | null; service_name?: string | null; catalog_snapshot?: {servicio?: string}; cost?: number | null; maintenance_type?: MaintenanceType; fault_id?: number | null; predicted_due_date?: string | null; prediction_error_days?: number | null}
+export interface Fault {id: number; description: string; dtc: string | null; reported_on: string; severity: Severity; status: string; safe_to_defer: boolean; deadline: string | null; resolution_notes: string | null; assessment_message?: string; safety_evaluation?: string; service_id?: string | null; was_predicted?: boolean | null; captured_by?: number | null; captured_at?: string; photos?: Evidence[]}
+export interface Downtime {id: number; vehicle_id: number; started_at: string; ended_at: string | null; notes: string; photos?: Evidence[]}
+export interface VehicleDetail {vehicle: Vehicle; readings: Reading[]; history: ServiceHistory[]; faults: Fault[]; downtime?: Downtime[]}
+export interface FleetMetrics {total_services: number; classified_services: number; preventive_services: number; services_before_failure_percent: number | null; prediction_samples: number; mean_absolute_error_days: number | null; mean_signed_error_days: number | null; unpredicted_failures: number; classified_failures: number; total_failures: number; downtime_days: number; open_downtimes: number; as_of: string; timezone: string}
+export interface ServicePlan {
+  service_id: string; name: string; action: string; status: string; due_date: string | null;
+  latest_entry_date: string | null; due_odometer: number | null; km_remaining: number | null;
+  severity: Severity; confidence: Confidence; window_start: string | null; window_end: string | null;
+  prediction: {optimistic: string | null; probable: string | null; pessimistic: string | null};
+  explanation: string; requires_validation: boolean; source_urls: string[]; duration_hours: number | null;
+}
+export interface Visit {id: string; planned_date: string; service_ids: string[]; fault_ids?: number[]; total_duration_hours: number | null; status: string; explanation: string; provisional: boolean; vehicle_id?: number; plate?: string; version?: string; drivers?: string[]; appointment_id?: string | null; performed_on?: string | null; captured_at?: string | null; original_date?: string | null; service_names?: string[]; notes?: string; changes?: {previous_date: string; scheduled_date: string; changed_at: string; notes?: string}[]}
+export interface Alert {id?: number | string; key: string; vehicle_id: number; plate?: string; service_id: string | null; fault_id: number | null; severity: Severity; message: string; deadline: string | null; days_remaining: number | null; threshold_days: number | null; status: string; kind: string}
+export interface Plan {
+  vehicle_id: number; generated_on: string; catalog_version: string; mode: string;
+  usage: {km_per_day: number; low_km_per_day: number; high_km_per_day: number; confidence: Confidence; valid_intervals: number; rejected_readings: number; explanation: string};
+  services: ServicePlan[]; visits: Visit[]; alerts: Alert[]; traffic_light: TrafficLight; warnings: string[];
+}
+export interface Variant {id: string; anio_modelo: number; carroceria: string; version: string; motor: string; transmisiones: string[]; traccion: string}
+export interface Notification {id: number; channel?: string; status?: string; created_at?: string; message?: string; payload?: Record<string, unknown>; [key: string]: unknown}

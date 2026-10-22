@@ -1,0 +1,117 @@
+.professional-shell .login-page{
+  display:grid;
+  place-items:center;
+  width:100%;
+  min-width:0;
+  padding:40px 0 62px;
+}
+.professional-shell .login-page .access-card{
+  width:100%;
+  max-width:480px;
+  min-width:0;
+  margin:0;
+  padding:38px 40px 32px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 16px 48px #1d2c3809,0 2px 8px #1d2c3804;
+}
+.professional-shell .login-page .access-heading{
+  margin-bottom:30px;
+}
+.professional-shell .login-page .access-label{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  margin-bottom:22px;
+  color:var(--action);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+.professional-shell .login-page .access-symbol{
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  flex-shrink:0;
+  border:1px solid #dce5e9;
+  border-radius:11px;
+  background:#eef3f5;
+}
+.professional-shell .login-page .page-heading{
+  margin:0;
+  min-width:0;
+}
+.professional-shell .login-page .page-heading h1{
+  max-width:340px;
+  margin:0;
+  color:var(--ink);
+  font-size:32px;
+  font-weight:600;
+  line-height:1.18;
+  letter-spacing:-1px;
+}
+.professional-shell .login-page .account-form label{
+  gap:9px;
+  margin-bottom:20px;
+  color:var(--ink);
+  font-size:13px;
+  font-weight:500;
+}
+.professional-shell .login-page .account-form input{
+  min-height:48px;
+  padding:12px 14px;
+  border-radius:9px;
+  background:#fff;
+}
+.professional-shell .login-page .account-form .button.primary{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  min-height:48px;
+  margin-top:7px;
+  padding:13px 16px;
+  border-radius:9px;
+  font-size:14px;
+  font-weight:600;
+}
+.professional-shell .login-page .access-support{
+  margin:28px 0 0;
+  padding-top:23px;
+  border-top:1px solid var(--line);
+  font-size:12px;
+  line-height:1.8;
+  overflow-wrap:anywhere;
+}
+.professional-shell .login-page .access-support a{
+  display:inline-block;
+  max-width:100%;
+  color:var(--action);
+  text-decoration:none;
+  text-underline-offset:3px;
+}
+.professional-shell .login-page .access-support a:hover{
+  color:var(--action-hover);
+  text-decoration:underline;
+}
+.professional-shell .login-page .message{
+  margin:0 0 20px;
+  overflow-wrap:anywhere;
+}
+.professional-shell .login-page .access-card>.message:last-child{
+  margin:22px 0 0;
+}
+@media(max-width:560px){
+  .professional-shell .login-page{padding:18px 0 32px}
+  .professional-shell .login-page .access-card{padding:28px 24px 25px;border-radius:14px}
+  .professional-shell .login-page .access-heading{margin-bottom:26px}
+  .professional-shell .login-page .page-heading h1{font-size:29px;letter-spacing:-.8px}
+  .professional-shell .login-page .account-form input{font-size:16px}
+}
+@media(max-width:360px){
+  .professional-shell .login-page .access-card{padding:25px 20px 23px}
+  .professional-shell .login-page .page-heading h1{font-size:27px}
+  .professional-shell .login-page .access-support{font-size:11px}
+}

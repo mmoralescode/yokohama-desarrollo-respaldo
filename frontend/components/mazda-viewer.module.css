@@ -1,0 +1,32 @@
+.card { margin-bottom: 27px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.header { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 4px 16px; }
+.header h2 { margin: 0; font-size: 14px; font-weight: 600; letter-spacing: -.3px; }
+.header .iconButton { margin-left: auto; }
+.stage { position: relative; height: clamp(240px, 28vw, 360px); min-width: 0; background: #d6d6d6; }
+.poster, .frame { width: 100%; height: 100%; display: block; border: 0; }
+.frame { touch-action: none; cursor: grab; }
+.frame:active { cursor: grabbing; }
+.poster { object-fit: contain; }
+.launch { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); min-height: 44px; padding: 0 20px; border: 1px solid #ffffff70; border-radius: 24px; background: #18211be8; color: #fff; cursor: pointer; font: inherit; font-size: 12px; }
+.launch:hover { background: #18211b; }
+.controls { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2px; padding: 4px 8px; }
+.cameraButton, .iconButton { width: 44px; height: 44px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--ink); cursor: pointer; font: inherit; font-size: 21px; }
+.cameraButton:hover:not(:disabled):not([aria-disabled="true"]), .iconButton:hover { background: #f0f2ec; }
+.card button:focus-visible, .card a:focus-visible, .card summary:focus-visible, .frame:focus-visible { outline: 3px solid var(--red-dark); outline-offset: -3px; }
+.cameraButton:disabled, .cameraButton[aria-disabled="true"] { opacity: .4; cursor: default; }
+.status { margin: 0; padding: 10px 16px; font-size: 12px; line-height: 1.6; color: #53604d; }
+.error { padding: 12px 16px; font-size: 12px; line-height: 1.6; background: #fff3e8; color: #793e23; }
+.error p { margin: 0 0 8px; }
+.error a { display: inline-block; margin: 6px; text-decoration: underline; }
+.credit { padding: 4px 16px; border-top: 1px solid var(--line); display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: 0 12px; font-size: 10px; line-height: 1.7; color: #61675e; }
+.hint { margin: 0; min-height: 44px; display: flex; align-items: center; }
+.references { max-width: 100%; }
+.references summary { display: list-item; width: fit-content; min-height: 44px; padding: 13px 2px; cursor: pointer; }
+.references[open] { width: 100%; }
+.references > div { padding-bottom: 10px; }
+.references p { margin: 0; }
+.references a { color: #434e41; text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 680px) {
+  .stage { height: 240px; }
+  .credit { padding-inline: 12px; gap: 0 8px; }
+}

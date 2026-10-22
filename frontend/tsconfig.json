@@ -1,0 +1,103 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-build/types/**/*.ts",
+    ".next-build/dev/types/**/*.ts",
+    ".next-build-final/types/**/*.ts",
+    ".next-build-final/dev/types/**/*.ts",
+    ".next-proposal/types/**/*.ts",
+    ".next-proposal/dev/types/**/*.ts",
+    ".next-proposal-dev/types/**/*.ts",
+    ".next-proposal-dev/dev/types/**/*.ts",
+    ".next-admin/types/**/*.ts",
+    ".next-admin/dev/types/**/*.ts",
+    ".next-drivers-proposal/types/**/*.ts",
+    ".next-drivers-proposal/dev/types/**/*.ts",
+    ".next-drivers/types/**/*.ts",
+    ".next-drivers/dev/types/**/*.ts",
+    ".next-dashboard/types/**/*.ts",
+    ".next-dashboard/dev/types/**/*.ts",
+    ".next-dashboard-final/types/**/*.ts",
+    ".next-dashboard-final/dev/types/**/*.ts",
+    ".next-administration-e2e/types/**/*.ts",
+    ".next-administration-e2e/dev/types/**/*.ts",
+    ".next-administracion-final/types/**/*.ts",
+    ".next-administracion-final/dev/types/**/*.ts",
+    ".next-administration-proposal-e2e/types/**/*.ts",
+    ".next-administration-proposal-e2e/dev/types/**/*.ts",
+    ".next-administracion-final-v2/types/**/*.ts",
+    ".next-administracion-final-v2/dev/types/**/*.ts",
+    ".next-administracion-queretaro/types/**/*.ts",
+    ".next-administracion-queretaro/dev/types/**/*.ts",
+    ".next-administracion-multiestado/types/**/*.ts",
+    ".next-administracion-multiestado/dev/types/**/*.ts",
+    ".next-administracion-cumplimiento/types/**/*.ts",
+    ".next-administracion-cumplimiento/dev/types/**/*.ts",
+    ".next-operacion-20261004/types/**/*.ts",
+    ".next-operacion-20261004/dev/types/**/*.ts",
+    ".next-colores-documentos-20261004/types/**/*.ts",
+    ".next-colores-documentos-20261004/dev/types/**/*.ts",
+    ".next-dashboard-statistics-e2e/types/**/*.ts",
+    ".next-dashboard-statistics-e2e/dev/types/**/*.ts",
+    ".next-quiet-proposal-e2e/types/**/*.ts",
+    ".next-quiet-proposal-e2e/dev/types/**/*.ts",
+    ".next-sobrio-dashboard-20261004/types/**/*.ts",
+    ".next-sobrio-dashboard-20261004/dev/types/**/*.ts",
+    ".next-fault-resolution-e2e/types/**/*.ts",
+    ".next-fault-resolution-e2e/dev/types/**/*.ts",
+    ".next-conductores-solucion-20261004/types/**/*.ts",
+    ".next-conductores-solucion-20261004/dev/types/**/*.ts",
+    ".next-usuarios-20261004/types/**/*.ts",
+    ".next-usuarios-20261004/dev/types/**/*.ts",
+    ".next-cloud-security-check/types/**/*.ts",
+    ".next-cloud-security-check/dev/types/**/*.ts",
+    ".next-onboarding-e2e/types/**/*.ts",
+    ".next-onboarding-e2e/dev/types/**/*.ts",
+    ".next-documentos-20261005/types/**/*.ts",
+    ".next-documentos-20261005/dev/types/**/*.ts",
+    ".next-developer-admin-e2e/types/**/*.ts",
+    ".next-developer-admin-e2e/dev/types/**/*.ts",
+    ".next-section-search-e2e/types/**/*.ts",
+    ".next-section-search-e2e/dev/types/**/*.ts",
+    ".next-presentation-e2e/types/**/*.ts",
+    ".next-presentation-e2e/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next/dev/types",
+    ".next-*/dev/types"
+  ]
+}

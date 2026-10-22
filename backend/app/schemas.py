@@ -1,0 +1,392 @@
+"""Contratos de entrada; fechas locales, km finitos y triage explícito."""
+from datetime import date, datetime
+from datetime import date as CalendarDate
+import re
+from typing import Annotated, Literal
+
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from .time_utils import MEXICO_CITY, local_today, to_utc, utc_now, date_timestamp
+
+Km = Annotated[float, Field(ge=0, le=2_000_000, allow_inf_nan=False, strict=True)]
+
+
+class InputModel(BaseModel):
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+
+
+def normalize_driver_names(value: object) -> list[str]:
+    """Keep names human-readable without duplicate assignments per unit."""
+    if not isinstance(value, list) or len(value) > 20:
+        raise ValueError("Indique una lista de hasta 20 conductores.")
+    names, seen = [], set()
+    for item in value:
+        if not isinstance(item, str):
+            raise ValueError("Cada conductor debe tener un nombre válido.")
+        name = " ".join(item.split())
+        if not name or len(name) > 100:
+            raise ValueError("Cada nombre de conductor debe tener entre 1 y 100 caracteres.")
+        key = name.casefold()
+        if key not in seen:
+            names.append(name)
+            seen.add(key)
+    return names
+
+
+class VehicleAdministrationFields(InputModel):
+    nickname: str | None = Field(default=None, min_length=1, max_length=80)
+    registration_state: str | None = Field(default=None, min_length=1, max_length=80)
+    verification_period_start: date | None = None
+    verification_period_end: date | None = None
+    circulation_card_expires_on: date | None = None
+    plates_expires_on: date | None = None
+    vehicle_tax_due_on: date | None = None
+    vehicle_tax_paid_on: date | None = None
+    administrative_notes: str | None = Field(default=None, min_length=1, max_length=1500)
+    document_alert_days: int = Field(default=30, ge=1, le=180, strict=True)
+
+    @field_validator("vehicle_tax_paid_on")
+    @classmethod
+    def actual_payment_date(cls, value: date | None) -> date | None:
+        if value is not None and value > local_today():
+            raise ValueError("La fecha real de pago no puede ser futura.")
+        return value
+
+    @model_validator(mode="after")
+    def complete_verification_period(self):
+        start, end = self.verification_period_start, self.verification_period_end
+        if (start is not None and end is None) or (start and end and start > end):
+            raise ValueError("Indique la fecha límite de verificación; si captura inicio, debe ser anterior o igual al límite.")
+        if self.vehicle_tax_paid_on is not None and self.vehicle_tax_due_on is None:
+            raise ValueError("Capture el plazo del periodo de tenencia / refrendo al que corresponde el pago.")
+        return self
+
+
+class VehicleAdministrationUpdate(InputModel):
+    nickname: str | None = Field(default=None, min_length=1, max_length=80)
+    registration_state: str | None = Field(default=None, min_length=1, max_length=80)
+    verification_period_start: date | None = None
+    verification_period_end: date | None = None
+    circulation_card_expires_on: date | None = None
+    plates_expires_on: date | None = None
+    vehicle_tax_due_on: date | None = None
+    vehicle_tax_paid_on: date | None = None
+    administrative_notes: str | None = Field(default=None, min_length=1, max_length=1500)
+    document_alert_days: int = Field(default=30, ge=1, le=180, strict=True)
+
+    @field_validator("vehicle_tax_paid_on")
+    @classmethod
+    def actual_payment_date(cls, value: date | None) -> date | None:
+        return VehicleAdministrationFields.actual_payment_date(value)
+
+    @model_validator(mode="after")
+    def nonempty(self):
+        if not self.model_fields_set:
+            raise ValueError("Indique al menos un dato administrativo para actualizar.")
+        return self
+
+
+class VehicleCreate(VehicleAdministrationFields):
+    vin: str = Field(min_length=17, max_length=17)
+    plate: str = Field(min_length=3, max_length=16)
+    model_year: int = Field(ge=1886, le=2100)
+    # A recognized Mazda variant remains a short route for the legacy form.
+    # Other makes are entered manually and do not need a catalog variant.
+    make: str | None = Field(default=None, min_length=1, max_length=80)
+    model: str | None = Field(default=None, min_length=1, max_length=80)
+    variant_id: str | None = Field(default=None, min_length=1, max_length=80)
+    version: str | None = Field(default=None, min_length=1, max_length=80)
+    body_style: str | None = Field(default=None, min_length=1, max_length=20)
+    engine: str | None = Field(default=None, min_length=1, max_length=20)
+    transmission: str | None = Field(default=None, min_length=1, max_length=10)
+    drive: str | None = Field(default=None, min_length=1, max_length=10)
+    fuel_type: str | None = Field(default=None, min_length=1, max_length=40)
+    color: str | None = Field(default=None, min_length=1, max_length=40)
+    maintenance_catalog: str | None = Field(default=None, min_length=1, max_length=80)
+    drivers: list[str] = Field(default_factory=list)
+    assigned_user_id: int | None = Field(default=None, gt=0, strict=True)
+    current_km: Km
+    in_service_date: date
+    usage_regime: Literal["normal", "severe"] = "normal"
+    is_synthetic: bool = False
+    severity_multiplier: float | None = Field(default=None, ge=0.1, le=1, allow_inf_nan=False)
+
+    @field_validator("drivers", mode="before")
+    @classmethod
+    def valid_drivers(cls, value: object) -> list[str]:
+        return normalize_driver_names(value)
+
+    @field_validator("vin")
+    @classmethod
+    def valid_vin(cls, value: str) -> str:
+        value = value.upper()
+        if not re.fullmatch(r"[A-HJ-NPR-Z0-9]{17}", value):
+            raise ValueError("VIN: 17 caracteres, sin I, O ni Q; confirmar autenticidad con agencia")
+        return value
+
+    @field_validator("plate")
+    @classmethod
+    def valid_plate(cls, value: str) -> str:
+        value = value.upper().replace(" ", "")
+        if not re.fullmatch(r"[A-Z0-9-]{3,16}", value):
+            raise ValueError("Placas: use letras, números y guiones")
+        return value
+
+    @field_validator("in_service_date")
+    @classmethod
+    def no_future(cls, value: date) -> date:
+        if value > local_today():
+            raise ValueError("La puesta en servicio no puede ser futura")
+        return value
+
+
+class ReadingCreate(InputModel):
+    date: CalendarDate | None = None
+    recorded_at: datetime | None = None
+    source: Literal["manual", "gps", "obd"] = "manual"
+    odometer_km: Km
+
+    @model_validator(mode="after")
+    def timestamp(self):
+        if self.recorded_at is None and self.date is None:
+            raise ValueError("Indique recorded_at (fecha/hora con zona) o una fecha histórica.")
+        if self.recorded_at is not None:
+            self.recorded_at = to_utc(self.recorded_at)
+            day = self.recorded_at.astimezone(MEXICO_CITY).date()
+            if self.date is not None and self.date != day:
+                raise ValueError("La fecha no corresponde a la hora de Ciudad de México.")
+            if self.recorded_at > utc_now():
+                raise ValueError("No se aceptan lecturas futuras.")
+            self.date = day
+        elif self.date > local_today():
+            raise ValueError("No se aceptan lecturas futuras.")
+        return self
+
+    def storage_values(self) -> dict:
+        return {"date": self.date, "recorded_at": self.recorded_at or date_timestamp(self.date),
+                "time_precision": "timestamp" if self.recorded_at else "date",
+                "source": self.source, "odometer_km": self.odometer_km}
+
+
+class VehiclePolicyUpdate(InputModel):
+    severity_multiplier: float | None = Field(default=None, ge=0.1, le=1, allow_inf_nan=False)
+    usage_regime: Literal["normal", "severe"] | None = None
+    drivers: list[str] | None = None
+
+    @field_validator("drivers", mode="before")
+    @classmethod
+    def valid_drivers(cls, value: object) -> list[str]:
+        # Omitted means unchanged; an explicit [] clears the assignments.
+        # Explicit null is rejected instead of silently ignoring an edit.
+        return normalize_driver_names(value)
+
+    @model_validator(mode="after")
+    def nonempty(self):
+        if self.severity_multiplier is None and self.usage_regime is None and self.drivers is None:
+            raise ValueError("Indique conductores, factor de severidad o régimen de uso.")
+        return self
+
+
+class EvidencePhoto(InputModel):
+    filename: str = Field(min_length=1, max_length=160)
+    # Three MiB becomes four MiB in base64; bounded before decoding.
+    data_url: str = Field(min_length=1, max_length=4_194_350)
+
+
+class DocumentEvidenceCreate(InputModel):
+    document_type: Literal["verification", "circulation", "plates", "vehicle_tax", "other"]
+    notes: str = Field(default="", max_length=2000)
+    photos: list[EvidencePhoto] = Field(min_length=1, max_length=3)
+
+
+class ServiceCreate(InputModel):
+    service_id: str = Field(min_length=1, max_length=80)
+    performed_on: date
+    odometer_km: Km
+    notes: str = Field(default="", max_length=2000)
+    cost: float | None = Field(default=None, ge=0, le=100_000_000, allow_inf_nan=False, strict=True)
+    maintenance_type: Literal["preventive", "corrective", "unknown"] = "unknown"
+    fault_id: int | None = Field(default=None, gt=0)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @model_validator(mode="after")
+    def consistent_kind(self):
+        if self.fault_id is not None and self.maintenance_type != "corrective":
+            raise ValueError("Un servicio vinculado a una falla debe clasificarse como correctivo.")
+        return self
+
+
+class ReadingBatch(InputModel):
+    readings: list[ReadingCreate] = Field(min_length=1, max_length=500)
+
+
+class OdometerCaptureCreate(ReadingCreate):
+    notes: str = Field(default="", max_length=2000)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+
+class EvidenceAttachmentCreate(InputModel):
+    reading_id: int | None = Field(default=None, gt=0, strict=True)
+    incident_id: str | None = Field(default=None, min_length=1, max_length=36)
+    fault_id: int | None = Field(default=None, gt=0, strict=True)
+    service_id: int | None = Field(default=None, gt=0, strict=True)
+    downtime_id: int | None = Field(default=None, gt=0, strict=True)
+    notes: str = Field(default="", max_length=2000)
+    photos: list[EvidencePhoto] = Field(min_length=1, max_length=3)
+
+    @model_validator(mode="after")
+    def single_record(self):
+        if sum(getattr(self, name) is not None for name in (
+                "reading_id", "incident_id", "fault_id", "service_id", "downtime_id")) != 1:
+            raise ValueError("Seleccione un solo registro de esta unidad para asociar las fotografías.")
+        return self
+
+
+class OdometerEvidenceCreate(InputModel):
+    reading_id: int = Field(gt=0, strict=True)
+    notes: str = Field(default="", max_length=2000)
+    photo: EvidencePhoto
+
+
+class IncidentCreate(InputModel):
+    occurred_on: date
+    category: Literal["accidente", "averia", "documentacion", "otro"]
+    description: str = Field(min_length=8, max_length=3000)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @field_validator("occurred_on")
+    @classmethod
+    def no_future_incidents(cls, value: date) -> date:
+        if value > local_today():
+            raise ValueError("La fecha de la incidencia no puede estar en el futuro.")
+        return value
+
+
+class IncidentUpdate(InputModel):
+    status: Literal["abierta", "en_revision", "resuelta"]
+    resolution_notes: str = Field(default="", max_length=2000)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @model_validator(mode="after")
+    def resolution_required(self):
+        if self.status == "resuelta" and len(self.resolution_notes) < 8:
+            raise ValueError("Describa cómo se resolvió la incidencia (mínimo 8 caracteres).")
+        return self
+
+
+class AppointmentCreate(InputModel):
+    service_ids: list[str] = Field(min_length=1, max_length=100)
+    scheduled_date: date
+    original_visit_id: str | None = Field(default=None, max_length=220)
+    notes: str = Field(default="", max_length=2000)
+
+    @field_validator("service_ids")
+    @classmethod
+    def unique_services(cls, value):
+        if len(value) != len(set(value)) or any(not item or len(item) > 80 for item in value):
+            raise ValueError("Seleccione servicios distintos y válidos.")
+        return value
+
+
+class AppointmentUpdate(InputModel):
+    scheduled_date: date
+    notes: str | None = Field(default=None, max_length=2000)
+
+
+class ServiceBatchCreate(InputModel):
+    service_ids: list[str] = Field(default_factory=list, max_length=100)
+    performed_on: date
+    odometer_km: Km | None = None
+    notes: str = Field(default="", max_length=2000)
+    appointment_id: str | None = Field(default=None, max_length=36)
+    manual_description: str | None = Field(default=None, min_length=3, max_length=200)
+    maintenance_type: Literal["preventive", "corrective", "unknown"] = "unknown"
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @model_validator(mode="after")
+    def actual_services(self):
+        AppointmentCreate.unique_services(self.service_ids)
+        if not self.service_ids and not self.manual_description:
+            raise ValueError("Seleccione al menos un servicio o describa el trabajo realizado.")
+        if self.performed_on > local_today():
+            raise ValueError("La fecha realizada no puede estar en el futuro.")
+        return self
+
+
+class FaultCreate(InputModel):
+    reported_on: date | None = None
+    description: str = Field(min_length=8, max_length=3000)
+    dtc: str | None = Field(default=None, max_length=12)
+    severity: Literal["critico", "importante", "menor"]
+    safe_to_defer: bool = False
+    deadline: date | None = None
+    assessment_notes: str = Field(default="", max_length=2000)
+    service_id: str | None = Field(default=None, min_length=1, max_length=80)
+    was_predicted: bool | None = None
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @field_validator("reported_on")
+    @classmethod
+    def actual_fault_date(cls, value):
+        if value is not None and value > local_today():
+            raise ValueError("La fecha del reporte no puede estar en el futuro.")
+        return value
+
+    @field_validator("dtc")
+    @classmethod
+    def valid_dtc(cls, value: str | None) -> str | None:
+        if not value:
+            return None
+        value = value.upper()
+        if not re.fullmatch(r"[PCBU][0-3][0-9A-F]{3}(?::[0-9A-F]{2})?", value):
+            raise ValueError("Código DTC no válido; ejemplo P0126 o P0126:00")
+        return value
+
+    @model_validator(mode="after")
+    def triage(self):
+        today = local_today()
+        if self.severity == "critico" and (self.safe_to_defer or (self.deadline and self.deadline > today)):
+            raise ValueError("Una falla crítica no puede diferirse; requiere atención inmediata")
+        if self.safe_to_defer:
+            if self.deadline is None or self.deadline < today or len(self.assessment_notes) < 12:
+                raise ValueError("Para diferir indique fecha límite vigente y evaluación técnica (mínimo 12 caracteres)")
+        elif self.deadline and self.deadline > today:
+            raise ValueError("Sin evaluación de diferimiento no se admite una fecha límite futura")
+        return self
+
+
+class FaultResolve(InputModel):
+    resolution_notes: str = Field(min_length=8, max_length=2000)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+
+class DowntimeCreate(InputModel):
+    started_at: datetime
+    ended_at: datetime | None = None
+    notes: str = Field(default="", max_length=2000)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @field_validator("started_at", "ended_at")
+    @classmethod
+    def valid_instant(cls, value):
+        if value is not None:
+            value = to_utc(value)
+            if value > utc_now():
+                raise ValueError("El tiempo fuera de servicio registra hechos, no fechas futuras.")
+        return value
+
+    @model_validator(mode="after")
+    def ordered(self):
+        if self.ended_at is not None and self.ended_at <= self.started_at:
+            raise ValueError("El fin debe ser posterior al inicio.")
+        return self
+
+
+class DowntimeClose(InputModel):
+    ended_at: datetime
+    notes: str | None = Field(default=None, max_length=2000)
+    photos: list[EvidencePhoto] = Field(default_factory=list, max_length=3)
+
+    @field_validator("ended_at")
+    @classmethod
+    def valid_end(cls, value):
+        return DowntimeCreate.valid_instant(value)

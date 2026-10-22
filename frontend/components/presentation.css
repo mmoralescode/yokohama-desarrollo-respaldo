@@ -1,0 +1,293 @@
+/* A restrained, shared presentation layer. No operational rules live here. */
+.simple-shell.professional-shell{
+  --paper:#f3f5f7;
+  --white:#fff;
+  --ink:#23313b;
+  --muted:#61707c;
+  --line:#dee4e9;
+  --surface-soft:#f7f9fa;
+  --action:#315966;
+  --action-hover:#244653;
+  --action-soft:#edf3f5;
+  --field-border:#aebcc5;
+  --focus:#3b697b;
+  --danger-soft:#fbefee;
+  --danger-ink:#993e3c;
+  --warning-soft:#faf3e7;
+  --amber:#795820;
+  --success-soft:#edf5ef;
+  --green:#3b654f;
+  --radius:14px;
+  --shadow:0 3px 14px #1d2c3805;
+  --font:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font);
+  font-size:14px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.professional-shell .workspace{min-height:100dvh}
+.professional-shell .simple-topbar{
+  min-height:80px;
+  padding:14px max(28px,calc((100vw - 1216px)/2));
+  background:#1d2c38;
+  border-bottom:1px solid #30414e;
+  box-shadow:0 2px 12px #1224300a;
+  color:#f6f8fa;
+}
+.professional-shell .simple-topbar>.brand,
+.professional-shell .operation-toggle .brand{
+  margin:0;
+  color:#f6f8fa;
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:1.35px;
+}
+.professional-shell .operation-toggle{
+  gap:24px;
+  padding:6px 8px;
+  border-radius:9px;
+  color:#f6f8fa;
+}
+.professional-shell .operation-toggle:hover{background:#ffffff0c}
+.professional-shell .operation-label{
+  gap:13px;
+  color:#cad6df;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.2px;
+}
+.professional-shell .simple-topbar .account-topbar{gap:18px;min-width:0}
+.professional-shell .simple-topbar .account-name{
+  color:#e2e9ee;
+  font-size:12px;
+  font-weight:500;
+  text-decoration:none;
+  min-width:0;
+}
+.professional-shell .simple-topbar .account-name:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.professional-shell .simple-topbar .text-button,
+.professional-shell .simple-topbar .button.secondary{
+  min-height:36px;
+  padding:8px 13px;
+  border:1px solid #6f828f;
+  border-radius:8px;
+  background:transparent;
+  color:#f6f8fa;
+  font-size:12px;
+  font-weight:500;
+  line-height:1.4;
+  text-decoration:none;
+}
+.professional-shell .simple-topbar .text-button:hover,
+.professional-shell .simple-topbar .button.secondary:hover{background:#ffffff12;border-color:#9babb7}
+.professional-shell .simple-topbar :focus-visible{outline-color:#c0dae5;outline-offset:4px}
+.professional-shell .simple-topbar .operation-dropdown :focus-visible{outline-color:var(--focus);outline-offset:2px}
+.professional-shell .operation-dropdown{
+  top:calc(100% + 17px);
+  width:304px;
+  max-width:calc(100vw - 32px);
+  padding:9px;
+  border-color:var(--line);
+  border-radius:12px;
+  background:var(--white);
+  box-shadow:0 16px 45px #172b3b20;
+}
+.professional-shell .operation-dropdown .nav-link{
+  gap:12px;
+  min-height:44px;
+  padding:12px 14px;
+  border-radius:8px;
+  color:var(--ink);
+  font-size:13px;
+  font-weight:550;
+}
+.professional-shell .operation-dropdown .nav-link svg{width:18px;height:18px;color:var(--muted)}
+.professional-shell .operation-dropdown .nav-link:hover{background:var(--surface-soft);color:var(--ink)}
+.professional-shell .operation-dropdown .nav-link.active{color:var(--action);background:var(--action-soft)}
+.professional-shell .operation-dropdown .nav-link.active svg{color:var(--action)}
+.professional-shell main{max-width:1280px;padding:38px 32px 52px}
+.professional-shell .page-heading{align-items:center;gap:24px;margin-bottom:30px}
+.professional-shell .page-heading>div:first-child{min-width:0}
+.professional-shell .page-heading h1{
+  margin:0;
+  color:var(--ink);
+  font-size:36px;
+  font-weight:650;
+  letter-spacing:-1.25px;
+  line-height:1.2;
+}
+.professional-shell h2{font-size:17px;font-weight:650;letter-spacing:-.3px;line-height:1.45}
+.professional-shell h3{font-size:14px;font-weight:600;line-height:1.5}
+.professional-shell .button{
+  min-height:44px;
+  padding:11px 17px;
+  border-radius:9px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.05px;
+}
+.professional-shell .button.primary{background:var(--action);border-color:var(--action);box-shadow:0 2px 3px #183b4910}
+.professional-shell .button.primary:hover:not(:disabled){background:var(--action-hover);border-color:var(--action-hover)}
+.professional-shell .button.secondary{background:#fff;border-color:#c4d0d8;color:var(--action-hover);box-shadow:0 1px 2px #1d2c3803}
+.professional-shell .button.secondary:hover:not(:disabled){background:var(--action-soft);border-color:var(--field-border)}
+.professional-shell .small-button{min-height:38px;padding:8px 12px;font-size:12px}
+.professional-shell :focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.professional-shell .panel{margin-bottom:24px;border-color:var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}
+.professional-shell .panel-header{padding:22px 26px;gap:16px}
+.professional-shell .panel-header>div{min-width:0}
+.professional-shell .panel-header h2{overflow-wrap:anywhere}
+.professional-shell .panel-body{padding:24px 26px}
+.professional-shell .panel-header+.panel-body{border-color:var(--line)}
+.professional-shell .fleet-summary-line{margin:-15px 0 24px;font-size:13px;font-weight:500;color:var(--muted)}
+.professional-shell .fleet-panel>.panel-header{padding-bottom:19px}
+.professional-shell .table-toolbar{padding:0 26px 23px;gap:14px;align-items:flex-end}
+.professional-shell .search-field input{background:var(--surface-soft);padding-left:39px}
+.professional-shell .search-field svg{top:50%;transform:translateY(-50%);color:var(--muted)}
+.professional-shell input,.professional-shell select,.professional-shell textarea{
+  min-height:44px;
+  padding:11px 13px;
+  border:1px solid var(--field-border);
+  border-radius:8px;
+  background:#fff;
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.45;
+}
+.professional-shell input:hover,.professional-shell select:hover,.professional-shell textarea:hover{border-color:#879eac}
+.professional-shell input::placeholder,.professional-shell textarea::placeholder{color:#6b7b87;opacity:1}
+.professional-shell input:focus,.professional-shell select:focus,.professional-shell textarea:focus{border-color:var(--action)}
+.professional-shell input[type=checkbox],.professional-shell input[type=radio]{width:17px;min-height:17px;height:17px;padding:0;accent-color:var(--action)}
+.professional-shell textarea{min-height:100px;resize:vertical}
+.professional-shell label{gap:8px;color:#495c69;font-size:13px;font-weight:500;line-height:1.5}
+.professional-shell .form-grid{gap:2px 20px}
+.professional-shell .mutation-form label{margin-bottom:17px}
+.professional-shell input[type=file]::file-selector-button{border-color:#c7d4dc;border-radius:6px;background:var(--action-soft);color:var(--action)}
+.professional-shell th{
+  padding:13px 20px;
+  border-color:var(--line);
+  background:#f6f8fa;
+  color:#5d6e7b;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+.professional-shell td{padding:17px 20px;border-color:#e9edf0;font-size:13px}
+.professional-shell th:first-child,.professional-shell td:first-child{padding-left:26px}
+.professional-shell th:last-child,.professional-shell td:last-child{padding-right:26px}
+.professional-shell tbody tr:hover{background:#f8fafb}
+.professional-shell .plate-link{color:var(--ink);font-size:14px;font-weight:650;letter-spacing:.35px}
+.professional-shell .cell-sub{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.55}
+.professional-shell .driver-names{color:var(--muted);font-size:12px}
+.professional-shell .unit-table-more{margin-top:6px;font-size:11px}
+.professional-shell .unit-table-more summary,.professional-shell .account-record-more summary{color:var(--action);font-size:12px;font-weight:500}
+.professional-shell .numeric{font-variant-numeric:tabular-nums;letter-spacing:.1px}
+.professional-shell .badge{padding:5px 9px;border-radius:6px;font-size:11px;font-weight:600;line-height:1.45}
+.professional-shell .badge.gray,.professional-shell .badge.neutral,.professional-shell .severity-menor,
+.professional-shell .status-pending_validation,.professional-shell .status-open{background:#eef2f5;color:#556775}
+.professional-shell .icon-link{width:36px;height:36px;border-radius:8px;color:var(--action)}
+.professional-shell .icon-link:hover{background:var(--action-soft)}
+.professional-shell .show-more-button{min-height:46px;border-color:var(--line);background:var(--surface-soft);color:var(--action);font-size:12px;font-weight:600}
+.professional-shell .show-more-button:hover{background:var(--action-soft)}
+.professional-shell .disclosure-panel>.panel-header{min-height:82px}
+.professional-shell .disclosure-content>.panel-body{border-color:var(--line)}
+.professional-shell .simple-identity{padding:25px 27px;border-left:3px solid #627f8d}
+.professional-shell .simple-identity strong{font-size:29px;font-weight:600;letter-spacing:-.65px;font-variant-numeric:tabular-nums}
+.professional-shell .simple-unit-actions{gap:16px;margin-bottom:26px}
+.professional-shell .simple-unit-actions>a{min-height:82px;padding:21px 23px;border-color:var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.professional-shell .simple-unit-actions>a>svg:first-child{color:var(--action)}
+.professional-shell .simple-unit-actions>a:hover{background:var(--surface-soft);border-color:#b5c6d0}
+.professional-shell .document-deadline:not(.attention){border-color:#e0e7ec;background:var(--surface-soft);color:var(--ink)}
+.professional-shell .document-edit-card{padding:22px;border-radius:10px}
+.professional-shell .document-deadline>h3{font-size:14px;font-weight:600}
+.professional-shell .document-editor-options{padding:17px 20px;border-color:var(--line);background:var(--surface-soft)}
+.professional-shell .document-photos{margin-top:25px;padding-top:23px;border-top:1px solid var(--line)}
+.professional-shell .photo-input{border-style:dashed;border-color:#aebfc9;border-radius:10px;background:#f8fafb}
+.professional-shell .photo-preview img{border-radius:8px;background:#eaf0f4}
+.professional-shell .evidence-row,.professional-shell .incident-card,.professional-shell .account-row{border-color:var(--line);border-radius:10px;background:#fff}
+.professional-shell .account-section{padding:26px}
+.professional-shell .account-profile-fields dt{color:var(--muted);font-size:12px;font-weight:500}
+.professional-shell .account-profile-fields dd{font-size:16px;font-weight:600;letter-spacing:-.2px}
+.professional-shell .account-row{padding:19px 20px}
+.professional-shell .account-assigned-units a{padding:17px 18px;border-color:var(--line);background:var(--surface-soft)}
+.professional-shell .account-assigned-units a:hover{background:var(--action-soft)}
+.professional-shell .calendar-panel .panel-header{padding:23px 26px}
+.professional-shell .calendar-heading-actions{max-width:none}
+.professional-shell .calendar-controls input[type=month]{width:190px;max-width:190px;min-height:38px;padding:8px 10px;font-size:13px}
+.professional-shell .calendar-weekday{padding:13px 0;background:var(--surface-soft);font-size:11px;font-weight:600;letter-spacing:.3px}
+.professional-shell .calendar-day{min-height:100px;padding:11px 10px;border-color:#e5ebef}
+.professional-shell .calendar-day.blank{background:#fafbfc}
+.professional-shell .calendar-day.today{background:#f1f6f8}
+.professional-shell .calendar-day.today .day-number{background:var(--action);color:#fff}
+.professional-shell .day-number{font-size:12px;font-weight:500}
+.professional-shell .agenda-entry{padding:22px;border-color:var(--line);border-radius:10px;gap:22px;background:#fff}
+.professional-shell .agenda-day>h3{font-size:13px;font-weight:600;color:var(--muted)}
+.professional-shell .alert-card{gap:19px;padding:24px 26px;border-color:var(--line)}
+.professional-shell .alert-content h3{font-size:14px;font-weight:500;line-height:1.65}
+.professional-shell .alert-symbol{padding:12px;border-radius:10px;background:var(--surface-soft);color:var(--action)}
+.professional-shell .service-details summary{color:var(--action);font-weight:500}
+.professional-shell .empty{padding:46px 24px}
+.professional-shell .empty-icon{background:var(--action-soft);color:#698594}
+.professional-shell .empty h3{color:var(--ink);font-size:15px;font-weight:600}
+.professional-shell .message{border-radius:10px;font-size:13px}
+.professional-shell .back-link{margin-bottom:20px;font-size:12px;color:var(--muted)}
+.professional-shell .footer{max-width:1280px;padding:21px 32px;font-size:11px;color:var(--muted);border-color:var(--line)}
+.professional-shell main section[id]{scroll-margin-top:104px}
+@media(max-width:1000px){
+  .professional-shell main{padding:30px 25px 42px}
+  .professional-shell .page-heading h1{font-size:33px}
+}
+@media(max-width:740px){
+  .professional-shell .simple-topbar{min-height:72px;padding:11px 16px;gap:10px;flex-wrap:nowrap}
+  .professional-shell .operation-toggle{gap:12px;padding:5px 2px;min-height:44px}
+  .professional-shell .operation-toggle .brand,.professional-shell .simple-topbar>.brand{font-size:17px;letter-spacing:.75px}
+  .professional-shell .operation-label{gap:6px;font-size:11px}
+  .professional-shell .simple-topbar .account-topbar{gap:10px;flex-wrap:nowrap}
+  .professional-shell .simple-topbar .account-name{max-width:90px;font-size:11px}
+  .professional-shell .simple-topbar .text-button{min-height:36px;padding:8px 9px;font-size:11px}
+  .professional-shell .operation-dropdown{top:calc(100% + 13px);width:290px;max-height:calc(100dvh - 100px)}
+  .professional-shell main{padding:27px 16px 36px}
+  .professional-shell .page-heading{gap:17px;margin-bottom:24px;align-items:flex-start;flex-direction:column}
+  .professional-shell .page-heading h1{font-size:29px;letter-spacing:-.8px}
+  .professional-shell .heading-actions{max-width:100%}
+  .professional-shell .heading-actions .button{white-space:normal;text-align:left}
+  .professional-shell .button,.professional-shell .small-button{min-height:44px;font-size:12px}
+  .professional-shell .panel-header,.professional-shell .calendar-panel .panel-header{padding:19px 18px;gap:12px}
+  .professional-shell .panel-body,.professional-shell .account-section{padding:20px 18px}
+  .professional-shell .table-toolbar{padding:0 18px 20px;gap:13px}
+  .professional-shell input,.professional-shell select,.professional-shell textarea{font-size:16px}
+  .professional-shell td,.professional-shell th{padding:16px 12px}
+  .professional-shell td:first-child,.professional-shell th:first-child{padding-left:18px}
+  .professional-shell td:last-child,.professional-shell th:last-child{padding-right:18px}
+  .professional-shell .plate-link{font-size:13px}
+  .professional-shell .badge{padding:5px 8px;font-size:11px}
+  .professional-shell .fleet-summary-line{margin:-11px 0 21px}
+  .professional-shell .simple-identity{padding:21px 20px}
+  .professional-shell .simple-unit-actions{gap:11px}
+  .professional-shell .simple-unit-actions>a{min-height:74px;padding:18px}
+  .professional-shell .disclosure-panel>.panel-header{padding:19px 17px;gap:10px}
+  .professional-shell .disclosure-panel>.panel-header h2{font-size:16px}
+  .professional-shell .disclosure-panel>.panel-header .small-button{padding:9px;font-size:11px}
+  .professional-shell .document-edit-card{padding:19px 17px}
+  .professional-shell .calendar-controls{gap:2px}
+  .professional-shell .calendar-controls input[type=month]{width:170px;max-width:170px;padding:8px}
+  .professional-shell .calendar-day{min-height:76px;padding:8px 4px;gap:7px}
+  .professional-shell .calendar-weekday{font-size:10px}
+  .professional-shell .agenda-entry{padding:18px;gap:16px}
+  .professional-shell .alert-card{padding:21px 18px;gap:13px}
+  .professional-shell .footer{padding:20px 16px;font-size:10px;gap:12px}
+  .professional-shell main section[id]{scroll-margin-top:94px}
+}
+@media(max-width:450px){
+  .professional-shell .operation-label{font-size:0;gap:0}
+  .professional-shell .operation-label>span{font-size:12px}
+  .professional-shell .operation-toggle{gap:9px}
+  .professional-shell .simple-topbar .account-topbar{gap:8px}
+  .professional-shell .simple-topbar .account-name{max-width:86px;flex-shrink:1}
+  .professional-shell .calendar-panel .panel-header{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  .professional-shell *{scroll-behavior:auto;transition:none}
+}
