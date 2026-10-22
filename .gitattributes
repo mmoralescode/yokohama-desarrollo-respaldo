@@ -1,0 +1,3 @@
+
+# Conservar bytes y finales de linea del respaldo.
+* -text whitespace=cr-at-eol
